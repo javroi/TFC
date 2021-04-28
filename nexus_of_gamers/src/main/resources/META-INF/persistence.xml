@@ -5,10 +5,8 @@
     http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd" version="2.2" >
 
     <persistence-unit name="WebPU" transaction-type="RESOURCE_LOCAL">
-        <class>mx.com.gm.sga.domain.Canjeo</class>
-        <class>mx.com.gm.sga.domain.Compra</class>
-        <class>mx.com.gm.sga.domain.Devolucion</class>
-        <class>mx.com.gm.sga.domain.Usuario</class>
+        <class>com.tfc.javierros.modelo.Usuario</class>
+         <class>com.tfc.javierros.modelo.ListaJuegos</class>
         <properties>
             <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/tfc_the_nexus_of_gamers?useSSL=false&amp;serverTimezone=UTC&amp;allowPublicKeyRetrieval=true"/> />
             <property name="javax.persistence.jdbc.user" value="root" />

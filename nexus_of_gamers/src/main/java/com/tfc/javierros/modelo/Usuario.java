@@ -7,7 +7,10 @@ package com.tfc.javierros.modelo;
 
 import java.io.Serializable;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 /**
@@ -15,9 +18,10 @@ import javax.persistence.Table;
  * @author javie
  */
 @Entity
-@Table (name="user")
-public class Usuario implements Serializable{
-    private static final long SerialVersionUID=1L;
+@Table(name = "user")
+public class Usuario implements Serializable {
+
+    private static final long SerialVersionUID = 1L;
     @Id
     private int id_user;
     private String name;
@@ -25,7 +29,6 @@ public class Usuario implements Serializable{
     private String nickname;
     private String email;
     private String password;
-    private int id_game_list;
 
     public Usuario() {
     }
@@ -43,14 +46,12 @@ public class Usuario implements Serializable{
         this.password = password;
     }
 
-    public Usuario(int id_user, String name, String surname, String nickname, String email, String password, int id_game_list) {
-        this.id_user = id_user;
+    public Usuario(String name, String surname, String nickname, String email, String password) {
         this.name = name;
         this.surname = surname;
         this.nickname = nickname;
         this.email = email;
         this.password = password;
-        this.id_game_list = id_game_list;
     }
 
     public int getId_user() {
@@ -101,13 +102,6 @@ public class Usuario implements Serializable{
         this.password = password;
     }
 
-    public int getId_game_list() {
-        return id_game_list;
-    }
 
-    public void setId_game_list(int id_game_list) {
-        this.id_game_list = id_game_list;
-    }
-    
-    
+
 }

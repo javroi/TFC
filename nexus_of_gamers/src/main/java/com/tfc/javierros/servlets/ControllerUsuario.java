@@ -28,6 +28,26 @@ public class ControllerUsuario extends HttpServlet {
         String op = request.getParameter("op");
         String url = "";
         switch (op) {
+            case "toNuevoUsuario":
+                url = "singup.jsp";
+                break;
+                
+            case "toCargarUsuario":
+                url = "singin.jsp";
+                break;
+             
+            case "toHome":
+                url = "home.jsp";
+                break;
+                
+            case "doCrearUsuario":
+                url = "AltaUsuarioAction";
+                break;
+                
+            case "doVerificarUsuario":
+                url = "AltaUsuarioAction";
+                break;
         }
+        request.getRequestDispatcher(url).forward(request, response);
     }
 }
