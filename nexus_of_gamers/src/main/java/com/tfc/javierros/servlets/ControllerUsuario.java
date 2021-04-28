@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  * Servlet implementation class Controller
+ * Servlet de controller para todo el tema de usuarios
  */
 @WebServlet("/ControllerUsuario")
 public class ControllerUsuario extends HttpServlet {

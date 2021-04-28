@@ -25,6 +25,7 @@ public class GestionUsuarios {
         return factory.createEntityManager();
     }
 
+    //Metodo para dar de alta un usuario
     public void altaUsuario(String nombre, String apellidos, String nickname, String email, String passw) {
         Usuario u = new Usuario(nombre, apellidos, nickname, email, passw);
         EntityManager em = getEntityManager();
@@ -34,6 +35,7 @@ public class GestionUsuarios {
         tx.commit();
     }
     
+    //Metodo para devolver la lista de todos los usuarios
     public List<Usuario> existeUsuario(){
         EntityManager em = getEntityManager();
         TypedQuery<Usuario> qr = em.createQuery("Select u from Usuario u", Usuario.class);
@@ -41,6 +43,7 @@ public class GestionUsuarios {
         return qr.getResultList();
     }
     
+    //Metodo a medias
     public void altaLista(int id_user) {
         ListaJuegos listaJuegos = new ListaJuegos(id_user);
         EntityManager em = getEntityManager();

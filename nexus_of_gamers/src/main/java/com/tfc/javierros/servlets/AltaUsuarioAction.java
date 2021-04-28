@@ -29,6 +29,7 @@ public class AltaUsuarioAction extends HttpServlet {
      * @see HttpServlet#service(HttpServletRequest request, HttpServletResponse
      * response)
      */
+    //Servlet que se encarga de controllar el alta de un nuevo ususario
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String nombre = request.getParameter("nombre");
         String apellidos = request.getParameter("apellido");
@@ -37,11 +38,9 @@ public class AltaUsuarioAction extends HttpServlet {
         String passw = request.getParameter("password");
         Usuario u = new Usuario(nombre, apellidos, nickname, email, passw);
         boolean existe = false;
-        //creamos un objeto de la capa de lgica de negocio
-        //y llamamos al método encargado de hacer el alta
         GestionUsuarios gUsuario = new GestionUsuarios();
         gUsuario.altaUsuario(nombre, apellidos, nickname, email, passw);
-        request.getSession().setAttribute("usuario", u);
+        request.getSession().setAttribute("usuario", u);//Creamos una sesion y pasamos el usuario creado a la sesion
         Usuario u2 = (Usuario) request.getSession().getAttribute("usuario");
         request.getRequestDispatcher("AltaListaAction").forward(request, response);
 

@@ -41,6 +41,7 @@
             </table> 
         </form> 
         <%
+            //Comprobacion de los inputs y de si existe el usuario
             if (request.getParameter("enviar") != null) {
                 String nickname = request.getParameter("nickname");
                 String pass = request.getParameter("password");
@@ -51,7 +52,7 @@
                 if (nickname.isEmpty() || pass.isEmpty()) {
                     out.print("<p>No puede haber campos vacios</p>");
                 } else {
-                    for (int i = 0; i < lista_users.size(); i++) {
+                    for (int i = 0; i < lista_users.size(); i++) {//Recorremos toda la bd para buscar a ver si el usuario y contrasenya coninciden
                         if (lista_users.get(i).getNickname().contentEquals(nickname) && lista_users.get(i).getPassword().contentEquals(pass)) {
                             request.getSession().setAttribute("usuario", lista_users.get(i));
                             existe = true;

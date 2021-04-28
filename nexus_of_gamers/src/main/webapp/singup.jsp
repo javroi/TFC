@@ -68,24 +68,25 @@
             </table> 
         </form>
         <%
+            //Comprobacion de los inputs y de si existe el usuario
             if (request.getParameter("crear") != null) {
-                        String nickname = request.getParameter("nickname");
-                            String pass = request.getParameter("password");
-                            String nombre = request.getParameter("nombre");
-                            String apellido = request.getParameter("apellido");
-                            String email = request.getParameter("email");
-                            String pass2 = request.getParameter("password2");
-                            String error = "";
-                            boolean valid = true;
-                            int numCount = 0;                   // Variable usada para almacenar numeros en el password
-                            int capCount = 0;
-                            Pattern pattern = Pattern
-                                    .compile("^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
-                                            + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$");
-                            Matcher mather = pattern.matcher(email);
-                            boolean existe = false;
-                            GestionUsuarios gUsuarios = new GestionUsuarios();
-                            List<Usuario> lista_users = gUsuarios.existeUsuario();
+                    String nickname = request.getParameter("nickname");
+                    String pass = request.getParameter("password");
+                    String nombre = request.getParameter("nombre");
+                    String apellido = request.getParameter("apellido");
+                    String email = request.getParameter("email");
+                    String pass2 = request.getParameter("password2");
+                    String error = "";
+                    boolean valid = true;
+                    int numCount = 0;// Variable usada para almacenar numeros en el password
+                    int capCount = 0;//Variable usada para almacenar Mayusculas
+                    Pattern pattern = Pattern
+                            .compile("^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
+                                    + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$");//Patron para comprobar el correo
+                    Matcher mather = pattern.matcher(email);//Comprobador del email
+                    boolean existe = false;
+                    GestionUsuarios gUsuarios = new GestionUsuarios();
+                    List<Usuario> lista_users = gUsuarios.existeUsuario();
                     for (int x = 0; x < pass.length(); x++) {
 
                         if ((pass.charAt(x) > 47 && pass.charAt(x) < 58)) { // Cuenta la cantidad de numero
@@ -111,34 +112,38 @@
                     if (capCount < 1) {
                         error = error + "Contraseña ha de contener mayusculas\n";
                     }
-
+                    //Comprueba si los errores estan vacios 
                     if (!error.isEmpty()) {
                         valid = false;
-                        
+
                     }
+                    
+                    //Comprueba campos vacios
                     if (nickname.isEmpty() || pass.isEmpty() || nombre.isEmpty() || apellido.isEmpty() || email.isEmpty() || pass2.isEmpty()) {
                         out.print("<p>No puede haber campos vacios</p>");
                     } 
-                    else if (!mather.find()) {                                                            //COMPRUEBA MAIL
+                    //Comprobueba el email
+                    else if (!mather.find()) {                                                            
                         out.print("<p>Error: La dirección de correo " + email + " no existe.</p>");
                     }
+                    //Comprueba que las contrasenyas coincidan 
                     else if (!pass.contentEquals(pass2)) {
                         out.print("<p>Las contraseñas no coinciden</p>");
-                    }  
+                    } 
+                    //Comprueba si hay errores en el formato de las contrasenyas
                     else if (!valid) {
                         out.print("<p>Error:" + error + " </p>");
-                    } 
-                    else {
-                            for (int i = 0; i < lista_users.size(); i++) {
-                                if (lista_users.get(i).getNickname().contentEquals(nickname) || lista_users.get(i).getEmail().contentEquals(email)) {
-                                    existe = true;
-                                }
+                    } else {
+                        for (int i = 0; i < lista_users.size(); i++) {//Recorre la bd para ver si ya hay algun usuario creado con esas credenciales
+                            if (lista_users.get(i).getNickname().contentEquals(nickname) || lista_users.get(i).getEmail().contentEquals(email)) {
+                                existe = true;
                             }
-                            if (existe) {
-                                out.print("<p>Usuario o email existente</p>");
-                            } else {
-                                request.getRequestDispatcher("ControllerUsuario?op=doCrearUsuario").forward(request, response);
-                            }
+                        }
+                        if (existe) {
+                            out.print("<p>Usuario o email existente</p>");
+                        } else {
+                            request.getRequestDispatcher("ControllerUsuario?op=doCrearUsuario").forward(request, response);
+                        }
                     }
 
                 }

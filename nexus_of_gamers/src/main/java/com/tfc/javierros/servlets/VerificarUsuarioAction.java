@@ -27,6 +27,7 @@ public class VerificarUsuarioAction {
      * @see HttpServlet#service(HttpServletRequest request, HttpServletResponse
      * response)
      */
+    //Servlet que se encarga de verificar si el usuario existe ya
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String nickname = request.getParameter("nickname");
         Usuario u = new Usuario();
