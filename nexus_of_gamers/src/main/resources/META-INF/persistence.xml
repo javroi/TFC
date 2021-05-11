@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
-    http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd" version="2.2" >
-
-    <persistence-unit name="WebPU" transaction-type="RESOURCE_LOCAL">
-        <class>com.tfc.javierros.modelo.Usuario</class>
-         <class>com.tfc.javierros.modelo.ListaJuegos</class>
-        <properties>
-            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/tfc_the_nexus_of_gamers?useSSL=false&amp;serverTimezone=UTC&amp;allowPublicKeyRetrieval=true"/> />
-            <property name="javax.persistence.jdbc.user" value="root" />
-            <property name="javax.persistence.jdbc.password" value="123456" />
-            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
-            <property name="eclipselink.logging.level.sql" value="FINE" />
-            <property name="eclipselink.loggin.parameters" value="true" />
+<persistence version="2.2" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence     http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd">
+  <persistence-unit name="WebPU" transaction-type="RESOURCE_LOCAL">
+    <class>com.tfc.javierros.modelo.Usuario</class>
+    <class>com.tfc.javierros.modelo.ListaJuegos</class>
+    <class>com.tfc.javierros.modelo.Juego</class>
+    <class>com.tfc.javierros.modelo.AddGames</class>
+    <class>com.tfc.javierros.modelo.Review</class>
+    <properties>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/tfc_the_nexus_of_gamers?useSSL=false&amp;serverTimezone=UTC&amp;allowPublicKeyRetrieval=true"/> /&gt;
+            <property name="javax.persistence.jdbc.user" value="root"/>
+            <property name="javax.persistence.jdbc.password" value="123456"/>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="eclipselink.logging.level.sql" value="FINE"/>
+            <property name="eclipselink.loggin.parameters" value="true"/>
         </properties>
-    </persistence-unit>
+  </persistence-unit>
 </persistence>

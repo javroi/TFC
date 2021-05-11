@@ -37,12 +37,17 @@ public class AltaUsuarioAction extends HttpServlet {
         String email = request.getParameter("email");
         String passw = request.getParameter("password");
         Usuario u = new Usuario(nombre, apellidos, nickname, email, passw);
-        boolean existe = false;
         GestionUsuarios gUsuario = new GestionUsuarios();
         gUsuario.altaUsuario(nombre, apellidos, nickname, email, passw);
-        request.getSession().setAttribute("usuario", u);//Creamos una sesion y pasamos el usuario creado a la sesion
-        Usuario u2 = (Usuario) request.getSession().getAttribute("usuario");
-        request.getRequestDispatcher("AltaListaAction").forward(request, response);
+        List<Usuario> lista = gUsuario.existeUsuario();
+        Usuario usuario = new Usuario();
+        for (int i = 0; i < lista.size(); i++) {
+            if(lista.get(i).getNickname().contentEquals(nickname)){
+               usuario = lista.get(i);
+            }
+        }
+        request.getSession().setAttribute("usuario", usuario);//Creamos una sesion y pasamos el usuario creado a la sesion
+        request.getRequestDispatcher("ControllerUsuario?op=doCrearLista").forward(request, response);
 
     }
 }

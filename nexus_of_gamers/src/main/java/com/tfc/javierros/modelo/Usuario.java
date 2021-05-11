@@ -6,11 +6,9 @@
 package com.tfc.javierros.modelo;
 
 import java.io.Serializable;
+import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 /**
@@ -21,13 +19,23 @@ import javax.persistence.Table;
 @Table(name = "user")
 public class Usuario implements Serializable {
 
-    private static final long SerialVersionUID = 1L;
     @Id
+    @Column(name = "id_user")
     private int id_user;
+    
+    @Column(name = "name")
     private String name;
+    
+    @Column(name = "surname")
     private String surname;
+    
+    @Column(name = "nickname")
     private String nickname;
+    
+    @Column(name = "email")
     private String email;
+    
+    @Column(name = "password")
     private String password;
 
     public Usuario() {

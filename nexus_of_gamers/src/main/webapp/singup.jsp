@@ -4,6 +4,7 @@
     Author     : javie
 --%>
 
+<%@page import="java.util.List"%>
 <%@page import="com.tfc.javierros.servlets.ControllerUsuario"%>
 <%@page import="java.util.regex.Matcher"%>
 <%@page import="java.util.regex.Pattern"%>
@@ -18,136 +19,98 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="styles/styles.css" rel="stylesheet" type="text/css">
+
     </head>
-    <body>
-        <h1>Crear Usuario
-        </h1> 
-        <form name="singup" method="post"> 
-            <table width="200" border="0"> 
-                <tr> 
-                    <th scope="row"><h2>Nombre</h2></th> 
-                    <td>
-                        <input name="nombre" type="text" class="creacion_usuario" value="" id="nombre" size="20" /> 
-                    </td> 
-                </tr> 
-                <tr> 
-                    <th scope="row"><h2>Apellidos</h2></th> 
-                    <td>
-                        <input name="apellido" type="text" class="creacion_usuario" value="" id="apellido" size="20" /> 
-                    </td> 
-                </tr> 
-                <tr> 
-                    <th scope="row"><h2>Usuario</h2></th> 
-                    <td>
-                        <input name="nickname" type="text" class="creacion_usuario" value="" id="usuario" size="20" /> 
-                    </td> 
-                </tr> 
-                <tr> 
-                    <th scope="row"><h2>Email</h2></th> 
-                    <td>
-                        <input name="email" type="text" class="creacion_usuario" value="" id="email" size="20" /> 
-                    </td> 
-                </tr> 
-                <tr> 
-                    <th height="33" scope="row"><h2>Contraseña</h2></th> 
-                    <td>
-                        <input name="password" type="password" class="creacion_usuario" value="" id="contrasenya" size="20" />
-                    </td> 
-                </tr> 
-                <tr> 
-                    <th height="33" scope="row"><h2>Repetir Contraseña</h2></th> 
-                    <td>
-                        <input name="password2" type="password" class="creacion_usuario" value=""  id="contrasenya2" size="20" />
-                    </td> 
-                </tr> 
-                <tr>
-                    <td>
-                        <input value="Crear" type="submit" name = "crear"/> 
-                    </td> 
-                </tr>
-            </table> 
+    <body id="pagina_princi">
+        <img src="images/logo_white_large.png" width="900" height="200" id="logo_ini">
+        <form name="singup" method="post" id="singup_form"> 
+            <h2 id="titulo_sing">Crear usuario </h2> 
+            <input name="nombre" type="text" class="creacion_usuario" value="" id="input_sing"  placeholder="Nombre" /> 
+            <input name="apellido" type="text" class="creacion_usuario" value="" id="input_sing" placeholder="Apellido" /> 
+            <input name="nickname" type="text" class="creacion_usuario" value="" id="input_sing" placeholder="Nickname"/>
+            <input name="email" type="text" class="creacion_usuario" value="" id="input_sing" placeholder="Email" />
+            <input name="password" type="password" class="creacion_usuario" value="" id="input_sing" placeholder="Contraseña" />
+            <input name="password2" type="password" class="creacion_usuario" value=""  id="input_sing" placeholder="Confirmar contraseña" />
+            <input value="Crear" type="submit" name = "crear_u" id="input_sing_sub"/> 
         </form>
         <%
             //Comprobacion de los inputs y de si existe el usuario
-            if (request.getParameter("crear") != null) {
-                    String nickname = request.getParameter("nickname");
-                    String pass = request.getParameter("password");
-                    String nombre = request.getParameter("nombre");
-                    String apellido = request.getParameter("apellido");
-                    String email = request.getParameter("email");
-                    String pass2 = request.getParameter("password2");
-                    String error = "";
-                    boolean valid = true;
-                    int numCount = 0;// Variable usada para almacenar numeros en el password
-                    int capCount = 0;//Variable usada para almacenar Mayusculas
-                    Pattern pattern = Pattern
-                            .compile("^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
-                                    + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$");//Patron para comprobar el correo
-                    Matcher mather = pattern.matcher(email);//Comprobador del email
-                    boolean existe = false;
-                    GestionUsuarios gUsuarios = new GestionUsuarios();
-                    List<Usuario> lista_users = gUsuarios.existeUsuario();
-                    for (int x = 0; x < pass.length(); x++) {
+            if (request.getParameter("crear_u") != null) {
+                String nickname = request.getParameter("nickname");
+                String pass = request.getParameter("password");
+                String nombre = request.getParameter("nombre");
+                String apellido = request.getParameter("apellido");
+                String email = request.getParameter("email");
+                String pass2 = request.getParameter("password2");
+                String error = "";
+                boolean valid = true;
+                int numCount = 0;// Variable usada para almacenar numeros en el password
+                int capCount = 0;//Variable usada para almacenar Mayusculas
+                Pattern pattern = Pattern
+                        .compile("^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
+                                + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$");//Patron para comprobar el correo
+                Matcher mather = pattern.matcher(email);//Comprobador del email
+                boolean existe = false;
+                GestionUsuarios gUsuarios = new GestionUsuarios();
+                List<Usuario> lista_users = gUsuarios.existeUsuario();
+                for (int x = 0; x < pass.length(); x++) {
 
-                        if ((pass.charAt(x) > 47 && pass.charAt(x) < 58)) { // Cuenta la cantidad de numero
-                            numCount++;
-                        }
-
-                        if ((pass.charAt(x) > 64 && pass.charAt(x) < 91)) { // Cuenta la cantidad de mayusculas
-                            capCount++;
-                        }
-
-                    }
-                    //valida el tamanyo
-                    if (pass.length() < 8) {
-                        error = error + "Contraseña ha de ser mayor de 8 caracteres\n";
+                    if ((pass.charAt(x) > 47 && pass.charAt(x) < 58)) { // Cuenta la cantidad de numero
+                        numCount++;
                     }
 
-                    //valida los numeros
-                    if (numCount < 1) {
-                        error = error + "Contraseña ha de contener numeros\n";
-                    }
-
-                    //valida las mayusculas
-                    if (capCount < 1) {
-                        error = error + "Contraseña ha de contener mayusculas\n";
-                    }
-                    //Comprueba si los errores estan vacios 
-                    if (!error.isEmpty()) {
-                        valid = false;
-
-                    }
-                    
-                    //Comprueba campos vacios
-                    if (nickname.isEmpty() || pass.isEmpty() || nombre.isEmpty() || apellido.isEmpty() || email.isEmpty() || pass2.isEmpty()) {
-                        out.print("<p>No puede haber campos vacios</p>");
-                    } 
-                    //Comprobueba el email
-                    else if (!mather.find()) {                                                            
-                        out.print("<p>Error: La dirección de correo " + email + " no existe.</p>");
-                    }
-                    //Comprueba que las contrasenyas coincidan 
-                    else if (!pass.contentEquals(pass2)) {
-                        out.print("<p>Las contraseñas no coinciden</p>");
-                    } 
-                    //Comprueba si hay errores en el formato de las contrasenyas
-                    else if (!valid) {
-                        out.print("<p>Error:" + error + " </p>");
-                    } else {
-                        for (int i = 0; i < lista_users.size(); i++) {//Recorre la bd para ver si ya hay algun usuario creado con esas credenciales
-                            if (lista_users.get(i).getNickname().contentEquals(nickname) || lista_users.get(i).getEmail().contentEquals(email)) {
-                                existe = true;
-                            }
-                        }
-                        if (existe) {
-                            out.print("<p>Usuario o email existente</p>");
-                        } else {
-                            request.getRequestDispatcher("ControllerUsuario?op=doCrearUsuario").forward(request, response);
-                        }
+                    if ((pass.charAt(x) > 64 && pass.charAt(x) < 91)) { // Cuenta la cantidad de mayusculas
+                        capCount++;
                     }
 
                 }
-            
+                //valida el tamanyo
+                if (pass.length() < 8) {
+                    error = error + "Contraseña ha de ser mayor de 8 caracteres\n";
+                }
+
+                //valida los numeros
+                if (numCount < 1) {
+                    error = error + "Contraseña ha de contener numeros\n";
+                }
+
+                //valida las mayusculas
+                if (capCount < 1) {
+                    error = error + "Contraseña ha de contener mayusculas\n";
+                }
+                //Comprueba si los errores estan vacios 
+                if (!error.isEmpty()) {
+                    valid = false;
+
+                }
+
+                //Comprueba campos vacios
+                if (nickname.isEmpty() || pass.isEmpty() || nombre.isEmpty() || apellido.isEmpty() || email.isEmpty() || pass2.isEmpty()) {
+                    out.print("<p class=\"errores\">No puede haber campos vacios</p>");
+                } //Comprobueba el email
+                else if (!mather.find()) {
+                    out.print("<p class=\"errores\">Error: La dirección de correo " + email + " no existe.</p>");
+                } //Comprueba que las contrasenyas coincidan 
+                else if (!pass.contentEquals(pass2)) {
+                    out.print("<p class=\"errores\">Las contraseñas no coinciden</p>");
+                } //Comprueba si hay errores en el formato de las contrasenyas
+                else if (!valid) {
+                    out.print("<p class=\"errores\">Error:" + error + " </p>");
+                } else {
+                    for (int i = 0; i < lista_users.size(); i++) {//Recorre la bd para ver si ya hay algun usuario creado con esas credenciales
+                        if (lista_users.get(i).getNickname().contentEquals(nickname) || lista_users.get(i).getEmail().contentEquals(email)) {
+                            existe = true;
+                        }
+                    }
+                    if (existe) {
+                        out.print("<p class=\"errores\">Usuario o email existente</p>");
+                    } else {
+                        request.getRequestDispatcher("ControllerUsuario?op=doCrearUsuario").forward(request, response);
+                    }
+                }
+
+            }
+
         %>
     </body>
 </html>

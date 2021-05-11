@@ -13,8 +13,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class Controller
- * Servlet de controller para todo el tema de usuarios
+ * Servlet implementation class Controller Servlet de controller para todo el
+ * tema de usuarios
  */
 @WebServlet("/ControllerUsuario")
 public class ControllerUsuario extends HttpServlet {
@@ -29,24 +29,52 @@ public class ControllerUsuario extends HttpServlet {
         String op = request.getParameter("op");
         String url = "";
         switch (op) {
+            case "toIndex":
+                url = "index.html";
+                break;
+            
             case "toNuevoUsuario":
                 url = "singup.jsp";
                 break;
-                
+
             case "toCargarUsuario":
                 url = "singin.jsp";
                 break;
-             
+
             case "toHome":
                 url = "home.jsp";
                 break;
                 
+            case "toBuscar":
+                url = "buscar.jsp";
+                break;
+                
+            case "toCargarJuegp":
+                url = "cargarJuego.jsp";
+                break;
+
+            case "toJuego":
+                url = "juego.jsp";
+                break;
+                
+            case "toSalir":
+                url = "logout.jsp";
+                break;
+                
+            case "toModificarUsuario":
+                url = "modificar.jsp";
+                break;
+
             case "doCrearUsuario":
                 url = "AltaUsuarioAction";
                 break;
-                
+
             case "doVerificarUsuario":
                 url = "AltaUsuarioAction";
+                break;
+
+            case "doCrearLista":
+                url = "AltaListaAction";
                 break;
         }
         request.getRequestDispatcher(url).forward(request, response);

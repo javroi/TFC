@@ -1,0 +1,378 @@
+[
+    {
+        "nombre": "Fornite",
+        "empresa": "Epic Games",
+        "genero": "Battle Royale",
+        "resumen": "Fortnite es un videojuego del año 2017 desarrollado por la empresa Epic Games, lanzado como diferentes paquetes de software que presentan diferentes modos de juego, pero que comparten el mismo motor de juego y mecánicas. Fue anunciado en los Spike Video Game Awards en 2011.\nLos modos de juego publicados incluyen Fortnite Battle Royale, un juego gratuito donde hasta cien jugadores luchan en una isla, en espacios cada vez más pequeños debido a la tormenta, para ser la última persona en pie, y Fortnite: Salvar el mundo, un juego cooperativo de hasta cuatro jugadores que consiste en luchar contra carcasas, criaturas parecidas a zombis, utilizando objetos y fortificaciones.",
+        "caratula": "fornite.jpg",
+        "estado":1
+    },
+{
+        "nombre": "Spelunky",
+        "empresa": "Mossmouth",
+        "genero": "Roge-lite",
+        "resumen": "Spelunky es un videojuego independiente de acción y aventura creado por Derek Yu e inicialmente lanzado como freeware para Microsoft Windows (con dos ports no oficiales a Mac OS X). Luego fue relanzado para Xbox 360, PlayStation 3, PlayStation Vita y nuevamente para Microsoft Windows. En Spelunky, el jugador controla a un espeleólogo que explora una serie de cavernas coleccionando tesoros, salvando damiselas y evadiendo trampas. La primera versión del juego fue lanzada el 21 de diciembre de 2008.5 El código fuente de la versión de 2008 de Windows fue hecho público el 25 de diciembre de 2009. La versión mejorada para Xbox Live Arcade fue lanzada el 4 de julio de 2012. Esta versión también fue lanzada en PC el 8 de agosto de 2013 y para PlayStation 3 el 27 y 28 de agosto de 2013.",
+        "caratula": "spelunky.jpg",
+        "estado":1
+    },
+    {
+        "nombre": "Resident Evil 7: Biohazard",
+        "empresa": "Capcom",
+        "genero": "Survival Horror",
+        "resumen": "Resident Evil 7: Biohazard es un videojuego perteneciente al género de horror de supervivencia, desarrollado y publicado por Capcom, lanzado el 24 de enero de 2017 para Microsoft Windows, PlayStation 4 y Xbox One, con una versión de PlayStation 4 con soporte completo para PlayStation VR. Es el undécimo título de la serie principal de Resident Evil, y, a diferencia de la mayoría de los otros juegos de la franquicia, este es en primera persona, siendo el primero de la saga principal en implementar este tipo de cámara y también es el videojuego más violento de toda la saga y es considerado un videojuego gore.",
+        "caratula": "re7.jpg",
+        "estado":1
+    },
+    {
+        "nombre": "The Last Guardian",
+        "empresa": "SCE Japan Studio",
+        "genero": "Acción-aventura",
+        "resumen": "The Last Guardian, y referido previamente por el título de trabajo secreto 'Proyecto Trico', es un videojuego perteneciente al género de acción-aventura desarrollado por el Estudio SIE Japan y publicado por Sony Interactive Entertainment en exclusiva para la consola PlayStation 4. En el juego, los jugadores controlan a un niño que se hace amigo de una criatura gigante mitad pájaro, mitad mamífero, llamada Trico. The Last Guardian se lanzó en todo el mundo en diciembre del año 2016.",
+        "caratula": "last_guardian.jpg",
+        "estado":1
+    },
+    {
+        "nombre": "Nuclear Throne",
+        "empresa": "Vlambeer",
+        "genero": "Rogelike",
+        "resumen": "Es un videojuego indie y de estilo Roguelike que salió oficialmente en Steam el 5 de diciembre de 2015 pero estuvo en Early Acess dos años. El juego trata principalmente sobre mutantes abriéndose paso a través de un mundo post-apocalíptico. La basura radioactiva presente en el ambiente obliga a los mutantes a evolucionar su mutación haciendo que desarrollen nuevos miembros y extremidades para poder avanzar, por lo que la misión de convertirse en el gobernador de los mutantes esté lleno de peligros. Está disponible en Pc, Mac, GNU/Linux, Playstation 4 y PlayStation Vita. En este encarnaremos a 12 mutantes diferentes (aunque inicialmente empezaremos con tan solo dos, el resto se irán desbloqueando según vayamos jugando). Nuclear Throne dispone de una gran cantidad de enemigos, armas (tanto cuerpo a cuerpo como a distancia y de todos los tipos imaginables), fases en las que ira aumentando la dificultad considerablemente al avanzar de una a otra y diferentes jefes que nos harán la vida imposible.",
+        "caratula": "nuclear_throne.jpg",
+        "estado":1
+    },
+    {
+        "nombre": "Journey",
+        "empresa": "Thatgamecompany",
+        "genero": "Aventura",
+        "resumen": "Journey es un videojuego de aventura desarrollado por la compañía independiente estadounidense Thatgamecompany y estrenado en 2012 para PlayStation Network. La trama describe la travesía de un viajero a lo largo de un extenso desierto para llegar a la cúspide de una montaña, mientras explora las ruinas de una antigua civilización.",
+        "caratula": "jpurney.jpg",
+        "estado":1
+    },
+    {
+        "nombre": "Undertale",
+        "empresa": "8-4 Fangamer",
+        "genero": "RPG",
+        "resumen": "Undertale es un videojuego de rol creado por el desarrollador independiente Toby Fox, en el que se adopta el control de un niño humano que ha caído en un mundo subterráneo conocido como el subsuelo, una región enorme aislada debajo de la superficie de la tierra, separada por una barrera mágica. A lo largo de la partida se encuentra con varios monstruos durante la misión de regresar a la superficie, principalmente a través del sistema de combate; navegando a través de mini ataques bullet hell del adversario y optar por pacificar o someter a los monstruos para salvarlos en lugar de matarlos. Estas opciones afectan a la jugabilidad, los diálogos, los personajes y la historia, cambiando en función de los resultados.",
+        "caratula": "undertale.jpg",
+        "estado":1
+    },
+    {
+        "nombre": "Titanfall 2",
+        "empresa": "Respawn Entertainment",
+        "genero": "Acción en primera persona",
+        "resumen": "Titanfall 2 es un videojuego de acción en primera persona estilo mecha, que ha sido desarrollado por Respawn Entertainment y está distribuido por EA Games para Microsoft Windows, PlayStation 4 y Xbox One. Es la secuela de Titanfall y fue lanzado a la venta el 28 de octubre de 2016.",
+        "caratula": "titanfall2.jpg",
+        "estado":1
+    },
+    {
+        "nombre": "Monster Hunter World",
+        "empresa": "Capcom",
+        "genero": "Rol de acción",
+        "resumen": "Monster Hunter: World es un videojuego perteneciente al género de rol y acción, desarrollado y publicado por la empresa Capcom, siendo el sexto título principal de la franquicia de videojuegos Monster Hunter. El juego fue anunciado en la conferencia de Sony en la E3 2017. Su lanzamiento mundial se produjo el 26 de enero de 2018 en las consolas PlayStation 4 y Xbox One; mientras que su fecha de salida para Microsoft Windows fue el 9 de agosto de 2018.",
+        "caratula": "mhw.jpg",
+        "estado":1
+    },
+    {
+        "nombre": "Sekiro: Shadows Die Twice",
+        "empresa": "From Software",
+        "genero": "Acción-aventura",
+        "resumen": "Sekiro: Shadows Die Twice es un videojuego de acción y aventura desarrollado por From Software y distribuido por Activision.​ El juego fue lanzado el 22 de marzo de 2019 en las plataformas PlayStation 4, Xbox One y Microsoft Windows.​ El juego sigue a un shinobi del Período Sengoku, conocido como Lobo, que intenta vengarse de un clan de samuráis que atacó y secuestró a su maestro",
+        "caratula": "sekiro.jpg",
+        "estado":1
+    },
+    {
+        "nombre": "Hearthstone",
+        "empresa": "Blizzard Entertainment",
+        "genero": "Collectible card video game",
+        "resumen": "Hearthstone es un juego de cartas coleccionables en línea creado por la empresa Blizzard Entertainment. Está centrado en el universo de Warcraft, y es de descarga gratuita, aunque con compras opcionales para acelerar el ritmo de colección de cartas y acceso a contenidos extra.",
+        "caratula": "hearthstone.jpg",
+        "estado":1
+    },
+    {
+        "nombre": "Hollow Knight",
+        "empresa": "Team Cherry",
+        "genero": "Metroidvania",
+        "resumen": "Hollow Knight es un videojuego perteneciente al género metroidvania desarrollado y publicado por Team Cherry. El videojuego cuenta la historia del Caballero, en su búsqueda para descubrir los secretos del largamente abandonado reino de Hallownest, cuyas profundidades atraen a los aventureros y valientes con la promesa de tesoros o la respuesta a misterios antiguos.",
+        "caratula": "hollow_knigth.jpg",
+        "estado":1
+    },
+    {
+        "nombre": "BioShock Infinite",
+        "empresa": "Irrational Games",
+        "genero": "Acción en primera persona",
+        "resumen": "BioShock Infinite es un videojuego de disparos en primera persona y la tercera entrega de la franquicia BioShock, desarrollado por Irrational Games y distribuido por 2K Games, siendo dirigido por Ken Levine, para las plataformas Microsoft Windows, PlayStation 3, Xbox 360 y Linux/SteamOS.1​ con su respectivo lanzamiento mundial el 26 de marzo de 2013. BioShock Infinite no es una secuela directa de las anteriores dos entregas, tomando lugar y tiempo antes de los eventos ocurridos en susodichas, pero reteniendo aún la misma esencia en elementos de jugabilidad y estructura estética en lo que ambientación se refiere. Situado en el año 1912, el jugador controlará a Booker DeWitt, un exagente de Pinkerton en su intento de rescatar a una mujer llamada Elizabeth, quien se encuentra atrapada a bordo de Columbia, una ciudad flotante en decadencia a punto de colapsar.",
+        "caratula": "bioshock_infinite.png",
+        "estado":1
+    },
+    {
+        "nombre": "Dark Souls",
+        "empresa": "From Software",
+        "genero": "Acción-aventura",
+        "resumen": "Dark Souls es un RPG de acción en tercera persona, que se caracteriza por una atmósfera oscura y una dificultad muy por encima de los estándares actuales. El juego recibió excelentes críticas debido a su jugabilidad desafiante, su atmósfera absorbente, sus controles prácticos y a su innovador modo multijugador, la mayoría de estos aspectos importados de su predecesor espiritual Demon's Souls. El juego tiene lugar en los últimos días de la Edad del Fuego, la cual comenzó tras la derrota de los Dragones de Piedra que anteriormente reinaban el mundo. Durante esta época el mundo era un lugar oscuro y lúgubre habitado solamente por una raza inmortal de dragones cuya capacidad de prolongar su vida eternamente provenía de sus escamas pétreas. En esta época aparentemente no existía aún ninguna llama, por lo que el mundo era un lugar completamente oscuro, amorfo y casi desierto. Así fue hasta que de la nada y sin nada que la provocase más que un ciclo natural, surgió la primera llama, un grupo de seres descubrieron en ella cuatro grandes almas, Nito el primer ser en morir, la bruja de Izalith y sus hijas del Caos, Gwyn el señor de la luz solar y portador de el alma en teoría más poderosa, y por último el furtivo pigmeo portador de el Alma oscura y que desapareció poco después de hacerse con la misma.",
+        "caratula": "Dark_Souls.jpg",
+        "estado":1
+    },
+    {
+        "nombre": "SUPERHOT",
+        "empresa": "Superhot Team",
+        "genero": "FPS",
+        "resumen": "Un sujeto (no se sabe su identidad) inicia un viejo ordenador, al hacer esto recibe un mensaje de texto de un amigo y este le informa de un nuevo juego que parece ser innovador y le envía el crack al personaje principal, entonces un archivo llamado superhot.exe es descargado en su ordenador. El jugador lo inicia y parece agradarle la idea, hasta que un extraño fallo en el juego le impide jugar más, su amigo se entera de esto y le envía el crack actualizado. Pronto el sujeto se dará cuenta de que SuperHot es más que un simple juego.",
+        "caratula": "superhot.jpg",
+        "estado":1
+    },
+    {
+        "nombre": "Metal Gear Solid V: The Phantom Pain",
+        "empresa": "Kojima Productions",
+        "genero": "Acción-aventura",
+        "resumen": "El protagonista del videojuego (Snake), tras los acontecimientos ocurridos en el atentado de 1975 en el Mar Caribe perpetuado por la organización 'XOF' queda herido de gravedad, por lo que debe ser trasladado junto con los demás tripulantes que se encontraban con él en ese momento al hospital perteneciente a las bases de Reino Unido, ubicado en Chipre, para ser tratados. Tras esto, el protagonista cae en un coma profundo del cual despierta tras nueve años, ubicándose cronológicamente en el año 1984. Inmediatamente tras su despertar, el doctor Evangelos Constantinou le explica lo que le ha ocurrido protagonista, además de que está siendo buscado por la organización 'Cipher'. Este decide realizarle cirugía plástica para cambiar su apariencia física y evitar que esta organización lo encuentre. Sin embargo, en ese instante ya es localizado y justo antes de ser asesinado por una mujer que irrumpe en el hospital, aparece una figura que se hace llamar Ishmael, el cual salva su vida y le pide que escapen juntos de este. Al escapar exitosamente ambos del lugar, el protagonista queda inconsciente y la presencia de su rescatista se pierde de vista. En ese momento, él es encontrado por Revolver 'Shalashaska' Ocelot, quien le proporciona una prótesis extraíble para su brazo izquierdo y reinstruye militarmente para el rescate de sus compañeros de armas que se encuentran en Afganistán para así preparar su venganza en contra de los responsables de su 'caída'.",
+        "caratula": "mg5.jpg",
+        "estado":1
+    },
+    {
+        "nombre": "Overwatch",
+        "empresa": "Blizzard Entertainment",
+        "genero": "FPS",
+        "resumen": "Overwatch pone a los jugadores en equipos de seis personas, con cada persona escogiendo uno de varios héroes disponibles, cada uno con movimientos y habilidades únicas. Los héroes están divididos en tres clases: Daño, Tanque y Apoyo. Los jugadores de cada equipo trabajan juntos para atacar y defender puntos de control o para atacar/defender 'cargas' (objetivos móviles que se mueven alrededor del mapa). Al terminar la partida los jugadores acumulan puntos, que les otorgan recompensas estéticas que no afectan el desempeño de juego.",
+        "caratula": "overwatch.jpg",
+        "estado":1
+    },
+    {
+        "nombre": "Marvel's Spider-Man",
+        "empresa": "Insomniac Games",
+        "genero": "Acción-aventura",
+        "resumen": "Marvel's Spider-Man es un videojuego de acción y aventura basado en el popular superhéroe hómonimo de la editorial Marvel Comics.El juego narra una historia completamente original de El Hombre Araña que no está ligada a películas o cómics anteriores. Cubre ambos aspectos del personaje, tanto de Peter Parker como el hombre araña, además de presentarlo en una faceta más experimentada.​ Durante el transcurso de la historia, Spider-Man debe hacerle frente a una gran variedad de famosos enemigos, tales como Mr. Negativo, Electro, Buitre, Rhino y Escorpión.​​",
+        "caratula": "Spider_Man.jpg",
+        "estado":1
+    },
+    {
+        "nombre": "Rocket League",
+        "empresa": "Psyonix",
+        "genero": "Deportes",
+        "resumen": "Rocket League es un videojuego que combina el fútbol con los vehículos. Fue desarrollado por Psyonix y lanzado el 8 de julio del 2015. Se encuentra disponible en español, tiene modos de juego cooperativo, de un jugador y en línea. El juego se asemeja al fútbol, pero utilizando vehículos en lugar de jugadores y una pelota de gran tamaño. En los partidos pueden participar desde 1 vs 1 hasta 3 vs 3 en modo competitivo en modo informal se puede hasta 4 vs 4 jugadores distribuidos en dos equipos, naranja y azul o rojo y gris cuando es 2 vs 2 equipo contra equipo. Cada vehículo puede utilizar propulsión extra, tanto para acelerar como para desplazarse por el aire, siendo esta una característica fundamental del juego. Dicha propulsión puede recargarse mediante dots distribuidos en el campo de juego y que reaparecen continuamente. Los partidos duran 5 minutos, disputándose un tiempo extra indefinido en caso de empate.",
+        "caratula": "rocket_league.jpg",
+        "estado":1
+    },
+    {
+        "nombre": "Donkey Kong Country: Tropical Freeze",
+        "empresa": "Retro Studios",
+        "genero": "Plataformas",
+        "resumen": "Donkey Kong y sus amigos Diddy Kong, Dixie Kong y Cranky Kong están celebrando su cumpleaños, cuando de repente un copo de nieve sopla y apaga la vela de cumpleaños. Es entonces cuando los cuatro ven un grupo de vikingos antropomórficos navegando hacia Donkey Kong Island. El líder usa su cuerno mágico para soplar un fuerte viento helado que congela la isla y manda a los Kongs a una isla lejana. Sin dudar en ningún momento, Donkey Kong viaja a través de seis islas (incluyendo su casa congelada) para luchar contra una variedad de enemigos para regresar y recuperar su casa.",
+        "caratula": "dk.jpg",
+        "estado":1
+    },
+    {
+        "nombre": "Super Smash Bros. Ultimate",
+        "empresa": "Bandai Namco Studios",
+        "genero": "Lucha",
+        "resumen": "Super Smash Bros. Ultimate es un videojuego de lucha crossover de la serie Super Smash Bros. desarrollada por Bandai Namco Games y Sora Ltd. y publicado por Nintendo. Este salió a la venta para Nintendo Switch a nivel mundial el 7 de diciembre de 2018.",
+        "caratula": "ssbu.jpg",
+        "estado":1
+    },
+    {
+        "nombre": "Vanquish",
+        "empresa": "PlatinumGames",
+        "genero": "Shooter en tercera persona",
+        "resumen": "Vanquish tiene lugar en un futuro próximo, donde se ha disparado la población humana del planeta con tanta rapidez que las naciones de personas en todo el mundo están luchando por los escasos recursos disponibles. Los Estados Unidos de América ha tratado de aliviar sus propios problemas de energía mediante el lanzamiento de una estación espacial que alberga un generador de energía solar. Sin embargo, el gobierno de la Federación de Rusia en la Tierra ha sido derrocado en un golpe de Estado por las fuerzas ultra-nacionalistas que se hacen llamar la Orden de la Estrella de Rusia.",
+        "caratula": "vanquish.jpg",
+        "estado":1
+    },
+    {
+        "nombre": "Hotline Miami",
+        "empresa": "Dennaton Games",
+        "genero": "Acción",
+        "resumen": "Hotline Miami es un videojuego de acción desarrollado en forma independiente por Dennaton Games, un equipo compuesto por Jonatan Söderström y Dennis Wedin, quienes previamente colaboraron en Keyboard Drumset Fucking Werewolf. El juego fue publicado por Devolver Digital y fue lanzado el 23 de octubre de 2012 en Windows. El juego fue fuertemente influenciado por la película Drive (2011), de Nicolas Winding Refn.",
+        "caratula": "hotline.jpg",
+        "estado":1
+    },
+    {
+        "nombre": "Mario Kart 8",
+        "empresa": "Nintendo",
+        "genero": "Carreras",
+        "resumen": "Mario Kart 8 es un videojuego de carreras desarrollado y publicado por Nintendo para la consola Wii U. Es la undécima entrega de la serie Mario Kart, octava en consolas de Nintendo. Fue lanzado en todo el mundo a finales de mayo de 2014, con 1,2 millones de copias vendidas en sus primeros cuatro días, convirtiéndose en el juego más rápidamente vendido de Wii U hasta la fecha. El 26 de junio de 2014, Nintendo registró unas ventas de 2 millones de copias en el primer mes a la venta.",
+        "caratula": "mario_kart8.jpg",
+        "estado":1
+    },
+    {
+        "nombre": "The Witcher 3: Wild Hunt",
+        "empresa": "CD Projekt RED",
+        "genero": "Acción-Aventura",
+        "resumen": "The Witcher 3: Wild Hunt es un videojuego de rol desarrollado y publicado por la compañía polaca CD Projekt RED. Esta compañía es la desarrolladora mientras que la distribución corre a cargo de la Warner Bros. Interactive, en el caso de Norteamérica y Bandai Namco para Europa. Fue anunciado en febrero de 2013 y su lanzamiento tuvo lugar a nivel mundial el 19 de mayo de 2015 para PlayStation 4, Xbox One, Nintendo Switch y Microsoft Windows. El juego es la tercera parte de la saga, precedido por The Witcher y The Witcher 2: Assassins of Kings, las cuales están basadas en la saga literaria de Geralt de Rivia escrita por Andrzej Sapkowski.",
+        "caratula": "witcher3.jpg",
+        "estado":1
+    },
+    {
+        "nombre": "What Remains of Edith Finch",
+        "empresa": "Giant Sparrow",
+        "genero": "Aventura gráfica",
+        "resumen": "What Remains of Edith Finch es un videojuego de aventura desarrollado por Giant Sparrow y publicado por Annapurna Interactive para Microsoft Windows, PlayStation 4 y Xbox One en 2017. El juego se centra en el personaje de Edith Finch, el último de la línea de la familia Finch que tiene una maldición percibida que hace que todos menos un miembro de cada generación muera de maneras inusuales. Edith ha regresado a la casa de su familia en la costa del estado de Washington después de la muerte de su madre para explorar la casa que habían abandonado a toda prisa años antes. Ella aprende sobre sus familiares y sus propias muertes visitando sus habitaciones, selladas y tratadas como santuarios para ellos, con cada muerte representada en una breve secuencia de juego para el jugador. El juego se presenta como una antología de estas mini experiencias, envuelto en el dramático relato de la historia y el destino de la familia a través de la narración de Edith.",
+        "caratula": "edith_finch.jpeg",
+        "estado":1
+    },
+    {
+        "nombre": "Bloodborne",
+        "empresa": "From Software",
+        "genero": "Accion-aventura",
+        "resumen": "Bloodborne es un videojuego de rol de acción dirigido por Hidetaka Miyazaki, desarrollado por From Software y JapanStudio distribuido por Sony Computer Entertainment para la plataforma de PlayStation 4. El videojuego sigue las acciones del personaje del jugador, el Cazador, a través de Yharnam, una ciudad ficticia de estilo victoriano, cuyos habitantes han sido afectados con una enfermedad de transmisión sanguínea anormal. Al despertar en Yharnam durante la noche de «la caza» tras recibir un tratamiento de la conocida «sangre milagrosa», el Cazador busca algo conocido solo como paleblood ('sangre pálida' en español) para terminar la cacería.",
+        "caratula": "bloodborn.jpg",
+        "estado":1
+    },
+    {
+        "nombre": "Luigi's Mansion 3",
+        "empresa": "Next Level Games",
+        "genero": "Acción-aventura",
+        "resumen": "Luigi's Mansion 3 es un videojuego de acción-aventura desarrollado por Next Level Games y publicado por Nintendo para Nintendo Switch. Es la secuela de Luigi's Mansion: Dark Moon y la tercera entrega de la serie Luigi's Mansion que se lanzó el 31 de octubre de 2019. El juego ve a los jugadores asumir el papel de Luigi quien debe explorar un hotel embrujado de gran altura, incorporando diferentes temas en cada piso, y rescatar a sus amigos de los fantasmas que lo habitan, después de que un viejo enemigo engaña al grupo para que lo visite de vacaciones. Junto con una serie de elementos de juego que regresan de entregas anteriores, el juego incorpora nuevas características, que incluyen movimientos adicionales para la captura de fantasmas, un asistente de doppelganger llamado Gomiluigi para resolver acertijos.",
+        "caratula": "luigis3.jpg",
+        "estado":1
+    },
+    {
+        "nombre": "Doom",
+        "empresa": "id Software",
+        "genero": "FPS",
+        "resumen": "Doom es un videojuego de disparos en primera persona desarrollado por id Software y publicado por Bethesda Softworks. Es el cuarto título de la serie principal y la primera gran entrega desde Doom 3 en 2004. Los jugadores toman el papel de un marine espacial sin nombre mientras lucha contra las fuerzas demoníacas del infierno que han sido desatadas por la Unión Aerospace Corporation en un planeta colonizado en el futuro, Marte. La jugabilidad vuelve a un ritmo más rápido con más niveles abiertos, más cerca de los primeros dos juegos que el enfoque más lento de terror de supervivencia de Doom 3. También cuenta con recorrido de entorno, mejoras de personaje y la capacidad de realizar ejecuciones conocidas como 'muertes gloriosas'. El juego también es compatible con un componente multijugador en línea y un editor de niveles conocido como 'SnapMap', desarrollado conjuntamente con Certain Affinity y Escalation Studios, respectivamente.",
+        "caratula": "doom.jpg",
+        "estado":1
+    },
+    {
+        "nombre": "The Witness",
+        "empresa": "Thekla, Inc.",
+        "genero": "Rompecabezas",
+        "resumen": "The Witness es un videojuego 3D perteneciente al género de rompecabezas creado por Jonathan Blow, desarrollado y publicado por Thekla, Inc. The Witness fue lanzado para Microsoft Windows y PlayStation 4 el 26 de enero de 2016, con la versión de iOS prevista para una fecha posterior. Inspirado por Myst, The Witness pone al jugador a explorar un mundo abierto en una isla llena de una serie de estructuras naturales y artificiales. El jugador avanza con la resolución de los rompecabezas que se basan en las interacciones con los laberintos presentados en los paneles alrededor de la isla. Las reglas y los resultados de la solución de los laberintos individuales son parte de los enigmas que los jugadores tendrán que venir aprendiendo ellos mismos a través de pistas visuales alrededor de la isla y por medio de registros de audio que el jugador puede encontrar. La jugabilidad va dirigida a incluir la menor instrucción como sea posible, especialmente para que los jugadores tengan muchas ganas de llegar a entender las reglas de estos rompecabezas para ellos y así también puedan estar llegando a momentos de gran epifanía en la exploración de la isla. El juego final tiene alrededor de 650 rompecabezas totales que hay que resolver, aunque el jugador no está obligado a resolverlos todos ellos para terminar el juego.",
+        "caratula": "witness.jpg",
+        "estado":1
+    },
+    {
+        "nombre": "Death Stranding",
+        "empresa": "Kojima Productions",
+        "genero": "Acción y exploración",
+        "resumen": "Death Stranding es un videojuego de acción y exploración en mundo abierto desarrollado por Kojima Productions y publicado por Sony Interactive Entertainment para PlayStation 4 y por 505 Games para Microsoft Windows. Su director es Hideo Kojima y es el primer juego de su compañía tras la finalización de su contrato con Konami en 2015. El actor Norman Reedus interpreta al protagonista principal. Su lanzamiento en la consola PlayStation 4 tuvo lugar el 8 de noviembre de 2019, mientras que su estreno en Windows está programado para el 14 de julio de 2020.",
+        "caratula": "death_strading.jpg",
+        "estado":1
+    },
+    {
+        "nombre": "Horizon Zero Dawn",
+        "empresa": "Guerrilla Games",
+        "genero": "Acción y exploración",
+        "resumen": "Horizon Zero Dawn es un videojuego de acción, aventura y de mundo abierto desarrollado por Guerrilla Games y distribuido por Sony Interactive Entertainment para PlayStation 4. Es la primera propiedad intelectual de Guerrilla Games desde la serie Killzone en 2004 y se anunció por primera vez en el E3 2015. El juego está protagonizado por Aloy, una guerrera de la tribu de los Nora y está ambientado en un futuro post-apocalíptico donde las máquinas son la raza dominante de la Tierra.",
+        "caratula": "horizon.jpeg",
+        "estado":1
+    },
+    {
+        "nombre": "Dead Cells",
+        "empresa": "Motion Twin",
+        "genero": "Roguevania",
+        "resumen": "Dead Cells es un videojuego híbrido entre el género de exploración de mazmorras o roguelike, y metroidvania, creando su propio género, “roguevania”, desarrollado por el estudio Motion Twin.​ El juego fue lanzado para PC, Mac, Linux, Playstation 4, Nintendo Switch y Xbox One,​ siendo lanzado en la plataforma de Steam el 6 de agosto de 2018, bajo la categoría de juego de acción e indie.",
+        "caratula": "dead_cells.jpg",
+        "estado":1
+    },
+    {
+        "nombre": "Portal 2",
+        "empresa": "Valve Corporation",
+        "genero": "Rompecabezas",
+        "resumen": "Portal 2 es el segundo videojuego mezcla de videojuego de lógica y de disparos en primera persona, de la saga Portal. Fue desarrollado por Valve Corporation. Tras los eventos del primer Portal, Chell (nuestra protagonista) despierta 50 días después de haber sido criogenizada en una cámara de relajación, donde una máquina alternativa le da una serie de indicaciones para moverse y finalmente volver a dormir. Posteriormente Chell es despertada de nuevo, pero esta vez la habitación donde se encuentra está seriamente deteriorada, con el contador de tiempo fallando. De fondo suena una voz al otro lado de la puerta, tras abrirla aparece Wheatley, el módulo de personalidad que despertó a Chell de su letargo.",
+        "caratula": "portal2.jpg",
+        "estado":1
+    },
+    {
+        "nombre": "Inside",
+        "empresa": "Playdead",
+        "genero": "Rompecabezas",
+        "resumen": "Inside es un videojuego desarrollado y publicado por Playdead en 2016 para PlayStation 4, Xbox One y Microsoft Windows. Fue lanzado para IOS en 2017 y para Nintendo Switch en 2018. El jugador controla a un niño en un mundo posapocalíptico, resolviendo puzles y evitando la muerte. Es el sucesor del juego realizado por la misma compañía en 2010 Limbo, y se caracteriza por usar las 2.5 D. Playdead empezó a trabajar en Inside al poco tiempo de lanzar Limbo, usando su propio motor de juegos. El equipo se cambió a Unity para simplificar su desarrollo. Inside apareció por primera vez en el E3 de 2014. Fue lanzado para Xbox One el 29 de junio de 2016, para Microsoft Windows el 7 de julio del mismo año y para PlayStation 4 el 23 de agosto. Más tarde fue lanzado para iOS el 15 de diciembre de 2017 y el 28 de junio de 2018 para Nintendo Switch.",
+        "caratula": "inside.jpg",
+        "estado":1
+    },
+    {
+        "nombre": "Grand Theft Auto V",
+        "empresa": "Rockstar Games",
+        "genero": "Sandbox",
+        "resumen": "Grand Theft Auto V es un videojuego de acción-aventura de mundo abierto desarrollado por el estudio Rockstar North y distribuido por Rockstar Games. Fue lanzado el 17 de septiembre de 2013 para las consolas PlayStation 3 y Xbox 360. En el año 2004, Michael Townley, Trevor Philips y Brad Snider eran ladrones de bancos que vivían en Ludendorff, en el estado de North Yankton (basado en Dakota del Norte). Michael, queriendo huir de esa vida entonces, planea un atraco falso junto al agente federal corrupto Dave Norton (Dave tenía que matar a Trevor y arrestar a Brad mientras Michael fingía su muerte). Pero todo sale mal porque Dave en vez de dispararle a Trevor, dispara a Brad y Trevor escapa. Michael es dado por muerto y es llevado a 'Los Santos' por el agente corrupto del FIB Dave Norton, amigo íntimo del mismo, trasladándolo así con su familia a Los Santos (San Andreas) con una nueva identidad: «Michael De Santa».",
+        "caratula": "gta5.jpg",
+        "estado":1
+    },
+    {
+        "nombre": "Red Dead Redemption 2",
+        "empresa": "Rockstar Games",
+        "genero": "Sandbox",
+        "resumen": "Red Dead Redemtion 2 trascurre en Estados Unidos, 1899. El ocaso del Salvaje Oeste ha comenzado y las fuerzas de la ley dan caza a las últimas bandas de forajidos. Los que no se rinden o sucumben, son asesinados. Tras un desastroso atraco fallido en la ciudad de Blackwater, Arthur Morgan y la banda de Van der Linde se ven obligados a huir. Con agentes federales y los mejores cazarrecompensas de la nación pisándoles los talones, la banda deberá atracar, robar y luchar, para sobrevivir en su camino por el escabroso territorio del corazón de América. Mientras las divisiones internas aumentan y amenazan con separarlos a todos, Arthur deberá elegir entre sus propios ideales y la lealtad a la banda que lo vio crecer.",
+        "caratula": "rdr2.jpg",
+        "estado":1
+    },
+    {
+        "nombre": "Celeste",
+        "empresa": "Matt Makes Games",
+        "genero": "Plataformas",
+        "resumen": "Celeste sigue a una joven llamada Madeline mientras intenta escalar la Montaña Celeste, una montaña ficticia en el oeste de Canadá que aparentemente posee el poder de manifestar la confusión interna y el verdadero yo en la realidad. Mientras sube la montaña se encuentra con otros personajes, incluido Theo, un joven optimista y seguro de sí mismo de Seattle que vino a la montaña para tomar fotografías; una anciana que vive en la montaña; El sr. Oshiro, el fantasma del conserje de un hotel abandonado en la montaña; y otra Madeline hostil que es la parte paranoica, pragmática y egoísta de ella, cuyo cuerpo ha sido creado por la montaña. Madeline sufre de depresión y ataques de pánico, y mientras sube la montaña, se ve obligada a enfrentar y superar sus demonios internos, además de las pruebas que ofrece la montaña.",
+        "caratula": "celeste.jpg",
+        "estado":1
+    },
+    {
+        "nombre": "Bayonetta",
+        "empresa": "PlatinumGames",
+        "genero": "Hack and slash",
+        "resumen": "Bayonetta tiene lugar en Vigrid, una ciudad ficticia en Europa. El personaje principal (con la voz de Hellena Taylor) es una bruja que cambia de forma y usa varias armas de fuego, junto con ataques mágicos que realiza con su propio cabello al convocar demonios para despachar a sus enemigos. Ella se despierta después de un sueño de 500 años y se encuentra en un área desconocida sin recuerdos de quién o qué es ella. Con el tiempo, ella comienza a recordar qué causó su situación actual. 500 años antes del incidente que causó la pérdida de memoria de Bayonetta, había dos facciones que preservaban el equilibrio entre la oscuridad y la luz en el mundo: las Brujas Umbra , que son seguidores de la oscuridad, y sus contrapartes, los Lumen Sages , que son seguidores de la luz. Las facciones compartieron dos tesoros distintos, los 'Ojos del mundo' (llamados por separado 'Ojo izquierdo'de la oscuridad y 'Ojo derecho'de la luz) que utilizaron para supervisar el justo paso del tiempo. Ambas facciones desaparecieron misteriosamente de Vigrid en circunstancias desconocidas. Bayonetta todavía tiene una joya adornada que contiene una pequeña gema roja, y cree que esta gema es el ojo izquierdo del mundo. Mientras busca el ojo derecho para poder recordar su pasado, ocasionalmente recibe flashbacks que le hacen recordar lo que causó su situación actual.",
+        "caratula": "bayonetta.jpg",
+        "estado":1
+    },
+    {
+        "nombre": "Uncharted 4: El Desenlace del Ladrón",
+        "empresa": "Naughty Dog",
+        "genero": "Acción-aventura",
+        "resumen": "Cronológicamente el juego toma lugar cuatro años después de Uncharted 3: La traición de Drake. El retirado cazafortunas Nathan Drake vive felizmente su vida junto con su esposa Elena Fisher, pero todo se derrumba cuando aparece su hermano Sam, el que Nathan pensaba que estaba muerto. Sam necesita su ayuda para desenmascarar una conspiración histórica del famoso pirata aventurero Henry Avery y su legendario tesoro. Además, no son los únicos que buscan el tesoro, ya que Rafe Adler, multimillonario y exsocio de los hermanos Drake mientras estuvieron en una prisión, está buscándolo también, con la ayuda de Nadine Ross, la líder de la red de mercenarios Shoreline. Debido a que Nathan se siente culpable por haber dado por muerto a su hermano en el pasado, decide volver al mundo de los cazatesoros. Durante el viaje, Drake irá por suburbios y zonas cubiertas de nieve, pero la localización principal será Libertalia, una ciudad perdida en Madagascar. Naughty Dog lo ha calificado como su mayor aventura hasta el momento, la cual pondrá a prueba los límites de su capacidad física, su determinación, y le hará decidir cuánto está dispuesto a sacrificar para salvar a sus seres queridos.",
+        "caratula": "uncharted.jpg",
+        "estado":1
+    },
+    {
+        "nombre": "Super Mario Galaxy 2",
+        "empresa": "Nintendo",
+        "genero": "Plataformas",
+        "resumen": "El argumento sigue la aventura que Mario realiza para derrotar al malvado Bowser en el espacio exterior, donde capturó a la Princesa Peach y tomó el control del Cosmos mediante el uso de la «Power Stars». Mario debe viajar por diversas galaxias para conseguir las «Power Stars» y con ellas llegar hasta el centro del Universo y rescatar a la Princesa. El juego fue planeado originalmente como una simple continuación de Super Mario Galaxy con unas pequeñas modificaciones a su sistema de juego —dicha versión sería llamada como «Super Mario Galaxy More»—.​ Sin embargo se decidió que el juego debía ser una secuela completa, pues cuando el equipo de desarrollo continuó produciendo el juego con nuevas ideas, el tiempo de desarrollo se extendió hasta dos años y medio en contraste al tiempo previsto de tan solo un año. De las modificaciones que se incluyeron se pueden nombrar al sistema dinámico de los niveles, nuevos power-ups, y más notablemente, la posibilidad de montar sobre el dinosaurio Yoshi.",
+        "caratula": "mario_galaxy2.jpg",
+        "estado":1
+    },
+    {
+        "nombre": "God of War (2018)",
+        "empresa": "SCE Santa Monica Studio",
+        "genero": "Acción-aventura",
+        "resumen": "Han pasado años desde que Kratos tomó su venganza contra los Dioses Olímpicos. Habiendo sobrevivido la pelea final contra su padre Zeus, Kratos vive ahora con su joven hijo Atreus en el mundo de los Dioses Nórdicos, una tierra hostil habitada por feroces monstruos y guerreros. Kratos deberá actuar como mentor y protector de su hijo, y tendrá que dominar la ira y enojo que tuvo durante muchos años y atar cabos sueltos.",
+        "caratula": "gow(2018).jpg",
+        "estado":1
+    },
+    {
+        "nombre": "Red Dead Redemption",
+        "empresa": "Rockstar Games",
+        "genero": "Sandbox",
+        "resumen": "La historia de Red Dead Redemption está ambientada en la frontera mexicano-estadounidense, en el año 1911, y está protagonizada por John Marston, un antiguo forajido que es chantajeado por unos agentes federales, Edgar Ross y Archer Fordham, de la Oficina Federal de Investigación para que capture a un excamarada de banda, Bill Williamson, para volver a ver a su familia y remontar su vida en su rancho.",
+        "caratula": "rdr.jpg",
+        "estado":1
+    },
+    {
+        "nombre": "NieR: Automata",
+        "empresa": "PlatinumGames",
+        "genero": "Rol de acción",
+        "resumen": "Nier: Automata comparte el mismo universo postapocalíptico que el primer Nier y toma lugar luego del cuarto final de este último videojuego. Aunque contiene referencias con la serie Drakengard en cuanto a su atmósfera oscura y la ramificación de su historia, no guarda conexión narrativa con dicha saga. Situada miles de años luego de los eventos que ocurrieron en Nier, la historia gira en torno a una guerra entre los androides remanentes de la humanidad y un ejército de máquinas invasoras de otro mundo. Nier: Automata comparte el mismo universo postapocalíptico que el primer Nier y toma lugar luego del cuarto final de este último videojuego. Aunque contiene referencias con la serie Drakengard en cuanto a su atmósfera oscura y la ramificación de su historia, no guarda conexión narrativa con dicha saga. Situada miles de años luego de los eventos que ocurrieron en Nier, la historia gira en torno a una guerra entre los androides remanentes de la humanidad y un ejército de máquinas invasoras de otro mundo. Con el fin de volver a recuperar el planeta, la humanidad creó el escuadrón «YoRHa», una unidad integrada por androides de combate con el fin de luchar en una guerra subsidiaria. Aunque a estos les niegan las emociones y carecen de nombres reales, tienen actitudes particulares por las que se les puede distinguir. A los androides se les comanda desde el 'Búnker', la sede de la escuadrilla de infantería automatizada YoRHa, que esta en órbita sobre el planeta y establece una resistencia auto-suficiente en la Tierra para hacer retroceder a las máquinas.",
+        "caratula": "nier_automata.jpg",
+        "estado":1
+    },
+    {
+        "nombre": "The Last of Us",
+        "empresa": "Naughty Dog",
+        "genero": "Acción-aventura",
+        "resumen": "De acuerdo con la trama de The Last of Us, en septiembre de 2013 se desata una pandemia en Estados Unidos ocasionada por una cepa del hongo Cordyceps, que al infectar a los humanos los convierte en criaturas caníbales, y que se transmite a través de una simple mordedura. En medio de la histeria colectiva, Joel (Troy Baker), su hija Sarah (Hana Hayes) y su hermano Tommy (Jeffrey Pierce) abandonan su hogar en los suburbios de Austin, Texas para evitar la infección, pero en el camino son interceptados por un oficial que asesina a Sarah al creer que está infectada.",
+        "caratula": "tlou.jpg",
+        "estado":1
+    },
+    {
+        "nombre": "Super Mario Odyssey",
+        "empresa": "Nintendo",
+        "genero": "Plataformas",
+        "resumen": "Mario se enfrenta contra Bowser dentro de su nave. El villano ya estaba vestido y preparado para casarse con la Princesa Peach (a quien ya tenía secuestrada). Después de una fuerte pelea, Bowser le lanza su sombrero a Mario para tirarlo de la nave (el primer golpe sólo le tira el gorro a Mario, pero luego el sombrero regresa con efecto boomerang, y logra tirarlo de la nave). Después Bowser pisotea el gorro que se le había caído a Mario y se va del Reino Champiñón con la princesa, permitiendo que las hélices de su nave trituren el gorro. La escena termina con un pequeño alienígena con forma de sombrero atrapando un pedazo del gorro que lleva la letra 'M' de Mario, y mirando la nave de Bowser alejándose. Tras toda la aventura, Mario enfrenta a Bowser en plena boda. Cuando acaba la pelea, Bowser y Mario intentan seducir a Peach. La princesa los rechaza a los dos y activa la nave Oddysey. En el último momento Mario salta sobre Bowser, que se queda en la Luna. En una escena post creditos, la Roca Lunar (elemento en forma de cubo que se encuentra en algunos reinos, que durante el Modo Historia permanecía inerte) ubicada en el ultimo reino comienza a emitir luces y a resonar.",
+        "caratula": "mario_oddysey.jpg",
+        "estado":1
+    },
+    {
+        "nombre": "The Legend of Zelda: Breath of the Wild",
+        "empresa": "Nintendo",
+        "genero": "Acción-aventura",
+        "resumen": "El jugador controla a Link, que despierta en un mundo postapocalíptico después de estar cien años durmiendo para derrotar a Ganon y salvar al reino de Hyrule. A diferencia de los otros títulos predecesores de la serie, el juego presenta un mundo abierto que le permite al jugador encontrar distintas maneras de completar un objetivo y que la historia pueda ser completada de forma no lineal.",
+        "caratula": "tlozbw.jpg",
+        "estado":1
+    }
+]
