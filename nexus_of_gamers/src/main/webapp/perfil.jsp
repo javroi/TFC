@@ -17,7 +17,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>The nexus of gamers</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="styles/styles.css" rel="stylesheet" type="text/css">
@@ -41,7 +41,6 @@
                             response.sendRedirect("ControllerUsuario?op=toIndex");
                         } else {
                             out.print("<a href=\"perfil.jsp\">Perfil</a>");
-                            out.print(u.getNickname());
 
 
                     %>
@@ -50,15 +49,20 @@
             </div>
         </header>
 
-        <div>
+        <div class ="perfil_juegos">
+            <h2>Estos son tus juegos <%
+                    out.print(u.getName());
+                %>:</h2>
             <nav>
-                <form name="seleccion" method="post">
-                    <input type="submit" name="jugados" value="Jugado">
-                    <input type="submit" name="jugando" value="Jugando">
-                    <input type="submit" name="pendientes" value="Pendiente">
-                </form>
+                <div class = "form_perfil">
+                    <form name="seleccion" method="post">
+                        <input type="submit" name="jugados" class ="estados" value="Jugado">
+                        <input type="submit" name="jugando" class ="estados" value="Jugando">
+                        <input type="submit" name="pendientes" class ="estados" value="Pendiente">
+                    </form>
+                </div>
             </nav>
-            <ul class="navega">
+            <div class="gallery-container-user">
                 <%                        if (request.getParameter("buscar") != null) {
                             response.sendRedirect("buscar.jsp?juego=" + request.getParameter("buscador"));
                         }
@@ -86,10 +90,10 @@
                                     for (int j = 0; j < juegos.size(); j++) {
                                         if (juegos.get(j).getId_game() == juego.getId_game()) {
                                             if (juegos.get(j).getEstado() == 2) {
-                                                out.print("<li><a href=\"juego.jsp?juego=");
+                                                out.print("<div class=\"gallery_item\"><a class=\"gallery_enlace\" href=\"juego.jsp?juego=");
                                                 out.print(juegos.get(j).getNombre());
-                                                out.print("\"><img src=\"images/" + juegos.get(j).getCaratula() + "\" width=\"150\" height=\"200\"></a>");
-                                                out.print("</li>");
+                                                out.print("\"><h2 class=\"gallery_title\">" + juegos.get(j).getNombre() + "</h2><img src=\"images/" + juegos.get(j).getCaratula() + "\" class=\"gallery_img\"></a>");
+                                                out.print("</div>");
                                             }
                                         }
                                     }
@@ -104,10 +108,10 @@
                                         if (juegos.get(j).getId_game() == juego.getId_game()) {
                                             System.out.println(juegos.get(j).getEstado());
                                             if (juegos.get(j).getEstado() == 2) {
-                                                out.print("<li><a href=\"juego.jsp?juego=");
+                                                out.print("<div class=\"gallery_item\"><a class=\"gallery_enlace\" href=\"juego.jsp?juego=");
                                                 out.print(juegos.get(j).getNombre());
-                                                out.print("\"><img src=\"images/" + juegos.get(j).getCaratula() + "\" width=\"150\" height=\"200\"></a>");
-                                                out.print("</li>");
+                                                out.print("\"><h2 class=\"gallery_title\">" + juegos.get(j).getNombre() + "</h2><img src=\"images/" + juegos.get(j).getCaratula() + "\" class=\"gallery_img\"></a>");
+                                                out.print("</div>");
                                             }
                                         }
                                     }
@@ -120,10 +124,10 @@
                                     for (int j = 0; j < juegos.size(); j++) {
                                         if (juegos.get(j).getId_game() == juego.getId_game()) {
                                             if (juegos.get(j).getEstado() == 3) {
-                                                out.print("<li><a href=\"juego.jsp?juego=");
+                                                out.print("<div class=\"gallery_item\"><a class=\"gallery_enlace\" href=\"juego.jsp?juego=");
                                                 out.print(juegos.get(j).getNombre());
-                                                out.print("\"><img src=\"images/" + juegos.get(j).getCaratula() + "\" width=\"150\" height=\"200\"></a>");
-                                                out.print("</li>");
+                                                out.print("\"><h2 class=\"gallery_title\">" + juegos.get(j).getNombre() + "</h2><img src=\"images/" + juegos.get(j).getCaratula() + "\" class=\"gallery_img\"></a>");
+                                                out.print("</div>");
                                             }
                                         }
                                     }
@@ -136,10 +140,10 @@
                                     for (int j = 0; j < juegos.size(); j++) {
                                         if (juegos.get(j).getId_game() == juego.getId_game()) {
                                             if (juegos.get(j).getEstado() == 4) {
-                                                out.print("<li><a href=\"juego.jsp?juego=");
+                                                out.print("<div class=\"gallery_item\"><a class=\"gallery_enlace\" href=\"juego.jsp?juego=");
                                                 out.print(juegos.get(j).getNombre());
-                                                out.print("\"><img src=\"images/" + juegos.get(j).getCaratula() + "\" width=\"150\" height=\"200\"></a>");
-                                                out.print("</li>");
+                                                out.print("\"><h2 class=\"gallery_title\">" + juegos.get(j).getNombre() + "</h2><img src=\"images/" + juegos.get(j).getCaratula() + "\" class=\"gallery_img\"></a>");
+                                                out.print("</div>");
                                             }
                                         }
                                     }
@@ -148,8 +152,9 @@
                         }
                     }
                 %>
-            </ul>
-            <a href="ControllerUsuario?op=toModificarUsuario">Modificar datos de usuario</a>
-
+            </div>
+            <div class="modificacion">
+                <a href="ControllerUsuario?op=toModificarUsuario">Modificar datos de usuario</a>
+            </div>
     </body>
 </html>

@@ -18,7 +18,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>The nexus of gamers</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="styles/styles.css" rel="stylesheet" type="text/css">
@@ -41,64 +41,70 @@
                             response.sendRedirect("ControllerUsuario?op=toIndex");
                         } else {
                             out.print("<a href=\"perfil.jsp\">Perfil</a>");
-                            out.print(u.getNickname());
-                        
+
 
                     %>
                     <a href="ControllerUsuario?op=toSalir">Cerrar Sesion</a>
                 </nav>
             </div>
         </header>
-        <h3>Datos del usuario</h3>
+        <div class="datos_usuario">
+            <div class="datos_usuario_detalle">
+                <h3>Datos del usuario</h3>
+                <%                    GestionUsuarios gestionUsuarios = new GestionUsuarios();
+                    out.print("<h4>Nombre: " + u.getName() + "</h4>");
+                    out.print("<h4>Apellidos: " + u.getSurname() + "</h4>");
+                    out.print("<h4>Nickname: " + u.getNickname() + "</h4>");
+                    out.print("<h4>Email: " + u.getEmail() + "</h4>");
+                %>
+            </div>
+
+
+            <form name="modificacion" method="post" class="modificar_usuario">
+                <p id="intro_modi">Introduzca los campos que se quiera modificar de su usuario</p>
+                <input type="text" name="nombre" placeholder="Nombre" class="modificar_usuario_text"  value=""></br>
+                <input type="text" name="apellido" placeholder="Apellidos" class="modificar_usuario_text" value=""></br>
+                <input type="text" name="nickname" placeholder="Nickname" class="modificar_usuario_text" value=""></br>
+                <input type="text" name="email" placeholder="Email" class="modificar_usuario_text" value=""></br>
+                <input type="text" name="contrasenya" placeholder="Contraseña" class="modificar_usuario_text" value=""></br>
+                <input type="submit" name="enviar" placeholder="Enviar" id="enviar_modi">
+            </form>
+        </div>
         <%
-            
-            GestionUsuarios gestionUsuarios = new GestionUsuarios();
-            out.print("<h4><b>Nombre: </b>"+u.getName()+"</h4>");
-            out.print("<h4><b>Apellidos: </b>"+u.getSurname()+"</h4>");
-            out.print("<h4><b>Nickname: </b>"+u.getNickname()+"</h4>");
-            out.print("<h4><b>Email: </b>"+u.getEmail()+"</h4>");
-        %>
-        <p>Introduzca los campos que se quiera modificar de su usuario</p>
-        <form name="modificacion" method="post">
-            <input type="text" name="nombre" placeholder="Nombre" value=""></br>
-            <input type="text" name="apellido" placeholder="Apellidos" value=""></br>
-            <input type="text" name="nickname" placeholder="Nickname" value=""></br>
-            <input type="text" name="email" placeholder="Email" value=""></br>
-            <input type="text" name="contrasenya" placeholder="Contraseña" value=""></br>
-            <input type="submit" name="enviar" placeholder="Enviar">
-        </form>
-        <%    
-            if(request.getParameter("enviar") != null){
-                String nombre = request.getParameter("nombre");
-                String apellido = request.getParameter("apellido");
-                String nickname = request.getParameter("nickname");
-                String email = request.getParameter("email");
-                String pass = request.getParameter("contrasenya");
-                
-                if(nombre.contentEquals("")){
-                    nombre = u.getName();
+                if (request.getParameter("buscar") != null) {
+                    response.sendRedirect("buscar.jsp?juego=" + request.getParameter("buscador"));
                 }
-                if(apellido.contentEquals("")){
-                    System.out.println(u.getSurname());
-                    apellido = u.getSurname();
+                if (request.getParameter("enviar") != null) {
+                    String nombre = request.getParameter("nombre");
+                    String apellido = request.getParameter("apellido");
+                    String nickname = request.getParameter("nickname");
+                    String email = request.getParameter("email");
+                    String pass = request.getParameter("contrasenya");
+
+                    if (nombre.contentEquals("")) {
+                        nombre = u.getName();
+                    }
+                    if (apellido.contentEquals("")) {
+                        System.out.println(u.getSurname());
+                        apellido = u.getSurname();
+                    }
+                    if (nickname.contentEquals("")) {
+                        System.out.println(u.getNickname());
+                        nickname = u.getNickname();
+                    }
+                    if (email.contentEquals("")) {
+                        System.out.println(u.getEmail());
+                        email = u.getEmail();
+                    }
+                    if (pass.contentEquals("")) {
+                        System.out.println(u.getPassword());
+                        pass = u.getPassword();
+                    }
+
+                    gestionUsuarios.ModificarUsuario(u.getId_user(), nombre, apellido, nickname, email, pass);
+                    Usuario u2 = new Usuario(nombre, apellido, nickname, email, pass);
+                    session.setAttribute("usuario", u2);
                 }
-                if(nickname.contentEquals("")){
-                    System.out.println(u.getNickname());
-                    nickname = u.getNickname();
-                }
-                if(email.contentEquals("")){
-                    System.out.println(u.getEmail());
-                    email = u.getEmail();
-                }
-                if(pass.contentEquals("")){
-                    System.out.println(u.getPassword());
-                    pass = u.getPassword();
-                }
-                
-                gestionUsuarios.ModificarUsuario(u.getId_user(), nombre, apellido, nickname, email, pass);
-                Usuario u2 = new Usuario(nombre, apellido, nickname, email, pass);
-                session.setAttribute("usuario", u2);
-            }
             }
         %>
     </body>

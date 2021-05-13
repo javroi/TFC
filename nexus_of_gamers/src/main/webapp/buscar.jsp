@@ -14,7 +14,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Nexus Of Gamers</title>
+        <title>The nexus of gamers</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <link href="styles/styles.css" rel="stylesheet" type="text/css">
@@ -39,7 +39,6 @@
                             response.sendRedirect("index.html");
                         } else {
                             out.print("<a href=\"perfil.jsp\">Perfil</a>");
-                            out.print(u.getNickname());
                         }
 
                     %>
@@ -51,26 +50,24 @@
             </div>
         </header>
     <body>
-        <%            
-            boolean encontrado = false;
+        <%            boolean encontrado = false;
             String nombre_j = request.getParameter("juego").toLowerCase();
             for (int i = 0; i < juegos.size(); i++) {
                 String nombre_jbd = juegos.get(i).getNombre().toLowerCase();
                 if (nombre_jbd.contentEquals(nombre_j)) {
-                    out.print("<li><a href=\"juego.jsp?juego=");
+                    out.print("<div class=\"gallery_item\"><a class=\"gallery_enlace\" href=\"juego.jsp?juego=");
                     out.print(juegos.get(i).getNombre());
-                    out.print("\"><img src=\"images/" + juegos.get(i).getCaratula() + "\" width=\"150\" height=\"200\"></a>");
-                    out.print("</li>");
+                    out.print("\"><h2 class=\"gallery_title\">" + juegos.get(i).getNombre() + "</h2><img src=\"images/" + juegos.get(i).getCaratula() + "\" class=\"gallery_img\"></a>");
+                    out.print("</div>");
                     encontrado = true;
                 }
             }
             if (!encontrado) {
-                out.print("<p>Juego no encontrado</p>");
+                out.print("<p id=\"juego_no_encontrado\">Juego no encontrado</p>");
             }
             if (request.getParameter("buscar") != null) {
-                response.sendRedirect("buscar.jsp?juego="+request.getParameter("buscador"));
+                response.sendRedirect("buscar.jsp?juego=" + request.getParameter("buscador"));
             }
-
 
 
         %>
