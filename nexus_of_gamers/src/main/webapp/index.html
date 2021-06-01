@@ -1,9 +1,4 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
         <title>The nexus of gamers</title>
@@ -14,22 +9,9 @@ and open the template in the editor.
     <body id="pagina_princi">
         <img src="images/logo_white_large.png" width="900" height="200" id="logo_ini">
         <div class="enlacesSesion">
-            <a href="ControllerUsuario?op=toCargarUsuario" class="enlaceSesionLog">Sing in</a>
-            <a href="ControllerUsuario?op=toNuevoUsuario" class="enlaceSesionSing">Sing up</a>
+            <a href="Controller?op=toCargarUsuario" class="enlaceSesionLog">Sing in</a>
+            <a href="Controller?op=toNuevoUsuario" class="enlaceSesionSing">Sing up</a>
         </div>
         
     </body>
-    <script>
-        function nobackbutton() {
-
-            window.location.hash = "no-back-button";
-
-            window.location.hash = "Again-No-back-button" //chrome
-
-            window.onhashchange = function () {
-                window.location.hash = "no-back-button";
-            }
-
-        }
-    </script>
 </html>

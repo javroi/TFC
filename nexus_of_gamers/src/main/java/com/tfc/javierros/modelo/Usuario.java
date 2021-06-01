@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.tfc.javierros.modelo;
 
 import java.io.Serializable;
@@ -13,7 +8,10 @@ import javax.persistence.Table;
 
 /**
  *
- * @author javie
+ * @author javier
+ * 
+ * @description Clase de Usuario la cual tiene su id, el nombre, el apellido, un nickname, un email y la contrasenya
+ * 
  */
 @Entity
 @Table(name = "user")

@@ -1,7 +1,7 @@
 <%-- 
     Document   : juego.jsp
     Created on : 2 may. 2021, 18:13:30
-    Author     : javie
+    Author     : javier
 --%>
 
 <%@page import="com.tfc.javierros.domain.GestionReview"%>
@@ -13,7 +13,7 @@
 <%@page import="com.tfc.javierros.domain.GestionJuegos"%>
 <%@page import="com.tfc.javierros.modelo.Juego"%>
 <%@page import="java.util.List"%>
-<%@page import="com.tfc.javierros.servlets.ControllerUsuario"%>
+<%@page import="com.tfc.javierros.servlets.Controller"%>
 <%@page import="java.util.regex.Matcher"%>
 <%@page import="java.util.regex.Pattern"%>
 <%@page import="com.tfc.javierros.domain.GestionUsuarios"%>
@@ -36,7 +36,7 @@ and open the template in the editor.
     <body>
         <%
             String nombre = request.getParameter("juego");
-            String opcion = null;
+            String opcion = "";
             GestionJuegos gJuegos = new GestionJuegos();
             GestionReview gReview = new GestionReview();
             GestionListaJuegos gListaJuegos = new GestionListaJuegos();
@@ -45,7 +45,7 @@ and open the template in the editor.
             List<Juego> juegos = gJuegos.traerJuegos();
             List<ListaJuegos> listas = gListaJuegos.traerListas();
             List<AddGames> add = gAddGames.traerAdd();
-            List<Review> reviews = gReview.traerAdd();
+            List<Review> reviews = gReview.traerReview();
 
             ListaJuegos listaJuegos = new ListaJuegos();
             Juego juego = new Juego();
@@ -68,15 +68,39 @@ and open the template in the editor.
                     <%
                         GestionJuegos gJuego = new GestionJuegos();
                         if (u == null) {
-                            response.sendRedirect("ControllerUsuario?op=toIndex");
+                            response.sendRedirect("Controller?op=toIndex");
                         } else {
                             out.print("<a href=\"perfil.jsp\">Perfil</a>");
-                        
+
                     %>
-                    <a href="ControllerUsuario?op=toSalir">Cerrar Sesion</a>
+                    <a href="Controller?op=toSalir">Cerrar Sesion</a>
                 </nav>
             </div>
         </header>
+        <div class="popup-wrapper">
+            <div class="popup">
+                <div class="popup-close">x</div>
+                <div class="popup-content">
+                    <h3>No puedes añadir/modificar un juego sin seleccionar su estado</h3>
+                </div>
+            </div>
+        </div>
+        <div class="popup-wrapper_anyadir">
+            <div class="popup">
+                <div class="popup-close2">x</div>
+                <div class="popup-content">
+                    <h3>Juego añadido</h3>
+                </div>
+            </div>
+        </div> 
+        <div class="popup-wrapper_modificar">
+            <div class="popup">
+                <div class="popup-close3">x</div>
+                <div class="popup-content">
+                    <h3>Juego modificado</h3>
+                </div>
+            </div>
+        </div>              
         <%            if (request.getParameter("buscar") != null) {
                 response.sendRedirect("buscar.jsp?juego=" + request.getParameter("buscador"));
             }
@@ -103,30 +127,30 @@ and open the template in the editor.
                     }
                 }
             }
-            %>
-            <div class="radio">
-            <%
-            if (juegoenlista) {
-                out.print("<h2 id=\"titulo_radio\">Modificar estado del juego</h2>");
-                out.print("<form name=\"seleccion\" method=\"post\" action=\"\">");
-                out.print("<input type=\"radio\" name = \"add\" value=\"Jugado\" id=\"opcion1\" class=\"radio__input\"><label class=\"radio__label\" for=\"opcion1\"> Jugado </label>");
-                out.print("<input type=\"radio\" name = \"add\" value=\"Jugando\" id=\"opcion2\" class=\"radio__input\"><label class=\"radio__label\" for=\"opcion2\"> Jugando </label>");
-                out.print("<input type=\"radio\" name = \"add\" value=\"Pendiente\" id=\"opcion3\" class=\"radio__input\"> <label class=\"radio__label\" for=\"opcion3\"> Pendiente </label>");
-                out.print("<input type=\"submit\" name=\"modificar\" value=\"Modificar\" id=\"radio_sub\">");
-                out.print("</form>");
-            } else {
-                out.print("<h2 id=\"titulo_radio\">Añadir un juego</h2>");
-                 out.print("<form name=\"seleccion\" method=\"post\" action=\"\">");
-                out.print("<input type=\"radio\" name = \"add\" value=\"Jugado\" id=\"opcion1\" class=\"radio__input\"><label class=\"radio__label\" for=\"opcion1\"> Jugado </label>");
-                out.print("<input type=\"radio\" name = \"add\" value=\"Jugando\" id=\"opcion2\" class=\"radio__input\"><label class=\"radio__label\" for=\"opcion2\"> Jugando </label>");
-                out.print("<input type=\"radio\" name = \"add\" value=\"Pendiente\" id=\"opcion3\" class=\"radio__input\"> <label class=\"radio__label\" for=\"opcion3\"> Pendiente </label>");
-                out.print("<input type=\"submit\" name=\"anyadir\" value=\"Añadir\" id=\"radio_sub\">");
-                out.print("</form>");
-            }
         %>
-            </div>
-            <div class="datos">
-        <%
+        <div class="radio">
+            <%
+                if (juegoenlista) {
+                    out.print("<h2 id=\"titulo_radio\">Modificar estado del juego</h2>");
+                    out.print("<form name=\"seleccion\" method=\"post\" action=\"\">");
+                    out.print("<input type=\"radio\" name = \"add\" value=\"Jugado\" id=\"opcion1\" class=\"radio__input\"><label class=\"radio__label\" for=\"opcion1\"> Jugado </label>");
+                    out.print("<input type=\"radio\" name = \"add\" value=\"Jugando\" id=\"opcion2\" class=\"radio__input\"><label class=\"radio__label\" for=\"opcion2\"> Jugando </label>");
+                    out.print("<input type=\"radio\" name = \"add\" value=\"Pendiente\" id=\"opcion3\" class=\"radio__input\"> <label class=\"radio__label\" for=\"opcion3\"> Pendiente </label>");
+                    out.print("<input type=\"submit\" name=\"modificar\" value=\"Modificar\" id=\"radio_sub\">");
+                    out.print("</form>");
+                } else {
+                    out.print("<h2 id=\"titulo_radio\">Añadir un juego</h2>");
+                    out.print("<form name=\"seleccion\" method=\"post\" action=\"\">");
+                    out.print("<input type=\"radio\" name = \"add\" value=\"Jugado\" id=\"opcion1\" class=\"radio__input\"><label class=\"radio__label\" for=\"opcion1\"> Jugado </label>");
+                    out.print("<input type=\"radio\" name = \"add\" value=\"Jugando\" id=\"opcion2\" class=\"radio__input\"><label class=\"radio__label\" for=\"opcion2\"> Jugando </label>");
+                    out.print("<input type=\"radio\" name = \"add\" value=\"Pendiente\" id=\"opcion3\" class=\"radio__input\"> <label class=\"radio__label\" for=\"opcion3\"> Pendiente </label>");
+                    out.print("<input type=\"submit\" name=\"anyadir\" value=\"Añadir\" id=\"radio_sub\">");
+                    out.print("</form>");
+                }
+            %>
+        </div>
+        <div class="datos">
+            <%
                 for (int i = 0; i < juegos.size(); i++) {
                     if (juegos.get(i).getNombre().contentEquals(nombre)) {
                         out.print("<img id=\"caratula_j\" src=\"images/" + juegos.get(i).getCaratula() + "\">");
@@ -143,39 +167,126 @@ and open the template in the editor.
                 }
 
                 if (request.getParameter("anyadir") != null) {
-                    int estado = 0;
-                    switch(opcion){
-                        case "Jugado":
-                            estado = 2;
-                            break;
-                        case "Jugando":
-                            estado = 3;
-                            break;
-                        case "Pendiente":
-                            estado = 4;
-                            break;
-                                    
+                    if (opcion.contentEquals("")) {
+                    %>
+                    <script>
+                        const popup = document.querySelector('.popup-wrapper');
+                        const close = document.querySelector('.popup-close');
+
+                        popup.style.display = 'block';
+
+                        close.addEventListener('click', () => {
+                            popup.style.display = 'none';
+                        });
+
+                        popup.addEventListener('click', e => {
+                            // console.log(e);
+                            if (e.target.className === 'popup-wrapper') {
+                                popup.style.display = 'none';
+                            }
+                        });
+                    </script>
+                    <%
+                    } 
+                    else {
+                        int estado = 0;
+                        switch (opcion) {
+                            case "Jugado":
+                                estado = 2;
+                                break;
+                            case "Jugando":
+                                estado = 3;
+                                break;
+                            case "Pendiente":
+                                estado = 4;
+                                break;
+
+                        }
+                        gJuego.ActualizarEstado(juego.getId_game(), estado);
+                        gAddGames.altaAnyadir(juego.getId_game(), listaJuegos.getId());
+                        %>
+                        <script>
+                        const popup = document.querySelector('.popup-wrapper_anyadir');
+                        const close = document.querySelector('.popup-close2');
+
+                        popup.style.display = 'block';
+
+                        close.addEventListener('click', () => {
+                            popup.style.display = 'none';
+                            window.location.href = "perfil.jsp";
+                        });
+
+                        popup.addEventListener('click', e => {
+                            // console.log(e);
+                            if (e.target.className === 'popup-wrapper') {
+                                popup.style.display = 'none';
+                                window.location.href = "perfil.jsp";
+                            }
+                        });
+                        </script>
+                        <%
                     }
-                    gJuego.ActualizarEstado(juego.getId_game(), estado);
-                    gAddGames.altaAnyadir(juego.getId_game(), listaJuegos.getId());
 
                 }
                 if (request.getParameter("modificar") != null) {
-                    int estado = 0;
-                    switch(opcion){
-                        case "Jugado":
-                            estado = 2;
-                            break;
-                        case "Jugando":
-                            estado = 3;
-                            break;
-                        case "Pendiente":
-                            estado = 4;
-                            break;
-                                    
-                    }
-                    gJuego.ActualizarEstado(juego.getId_game(), estado);
+                    if (opcion.contentEquals("")) {
+                    %>
+                    <script>
+                        const popup = document.querySelector('.popup-wrapper');
+                        const close = document.querySelector('.popup-close');
 
+                        popup.style.display = 'block';
+
+                        close.addEventListener('click', () => {
+                            popup.style.display = 'none';
+                        });
+
+                        popup.addEventListener('click', e => {
+                            // console.log(e);
+                            if (e.target.className === 'popup-wrapper') {
+                                popup.style.display = 'none';
+                            }
+                        });
+                    </script>
+                    <%
+                    } 
+                    else {
+                            int estado = 0;
+                            switch (opcion) {
+                                case "Jugado":
+                                    estado = 2;
+                                    break;
+                                case "Jugando":
+                                    estado = 3;
+                                    break;
+                                case "Pendiente":
+                                    estado = 4;
+                                    break;
+
+                            }
+                            gJuego.ActualizarEstado(juego.getId_game(), estado);
+                        %>
+                        <script>
+                        const popup = document.querySelector('.popup-wrapper_modificar');
+                        const close = document.querySelector('.popup-close3');
+
+                        popup.style.display = 'block';
+
+                        close.addEventListener('click', () => {
+                            popup.style.display = 'none';
+                            window.location.href = "perfil.jsp";
+                        });
+
+                        popup.addEventListener('click', e => {
+                            // console.log(e);
+                            if (e.target.className === 'popup-wrapper') {
+                                popup.style.display = 'none';
+                                window.location.href = "perfil.jsp";
+                            }
+                        });
+                        </script>
+                        <%
+                    }
                 }
 
                 for (int i = 0; i < reviews.size(); i++) {
@@ -191,10 +302,10 @@ and open the template in the editor.
                     nota = nota / notas.size();
                 }
             }
-        %>
-    <a id="valoracion" href="review.jsp?juego=<%out.print(juego.getId_game());%>">Valoración:<%out.print(nota);%></a>
-        
-                </div>
-            </div>
-    </body>
+            %>
+            <a id="valoracion" href="review.jsp?juego=<%out.print(juego.getId_game());%>">Valoración:<%out.print(nota);%></a>
+
+        </div>
+    </div>
+</body>
 </html>

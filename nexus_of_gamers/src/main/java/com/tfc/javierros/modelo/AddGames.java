@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.tfc.javierros.modelo;
 
 import java.io.Serializable;
@@ -13,7 +8,11 @@ import javax.persistence.Table;
 
 /**
  *
- * @author javie
+ * @author javier
+ * 
+ * @description Clase de AddGames la cual contiene su id, el del juego que se quiere anyadir
+ *              y la lista de juegos donde se quiere almacenar
+ * 
  */
 @Entity
 @Table(name = "add_game")

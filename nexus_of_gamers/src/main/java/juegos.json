@@ -1,6 +1,6 @@
 [
     {
-        "nombre": "Fornite",
+        "nombre": "Fortnite",
         "empresa": "Epic Games",
         "genero": "Battle Royale",
         "resumen": "Fortnite es un videojuego del año 2017 desarrollado por la empresa Epic Games, lanzado como diferentes paquetes de software que presentan diferentes modos de juego, pero que comparten el mismo motor de juego y mecánicas. Fue anunciado en los Spike Video Game Awards en 2011.\nLos modos de juego publicados incluyen Fortnite Battle Royale, un juego gratuito donde hasta cien jugadores luchan en una isla, en espacios cada vez más pequeños debido a la tormenta, para ser la última persona en pie, y Fortnite: Salvar el mundo, un juego cooperativo de hasta cuatro jugadores que consiste en luchar contra carcasas, criaturas parecidas a zombis, utilizando objetos y fortificaciones.",
@@ -244,7 +244,7 @@
         "empresa": "Kojima Productions",
         "genero": "Acción y exploración",
         "resumen": "Death Stranding es un videojuego de acción y exploración en mundo abierto desarrollado por Kojima Productions y publicado por Sony Interactive Entertainment para PlayStation 4 y por 505 Games para Microsoft Windows. Su director es Hideo Kojima y es el primer juego de su compañía tras la finalización de su contrato con Konami en 2015. El actor Norman Reedus interpreta al protagonista principal. Su lanzamiento en la consola PlayStation 4 tuvo lugar el 8 de noviembre de 2019, mientras que su estreno en Windows está programado para el 14 de julio de 2020.",
-        "caratula": "death_strading.jpg",
+        "caratula": "death_stranding.jpg",
         "estado":1
     },
     {
@@ -252,7 +252,7 @@
         "empresa": "Guerrilla Games",
         "genero": "Acción y exploración",
         "resumen": "Horizon Zero Dawn es un videojuego de acción, aventura y de mundo abierto desarrollado por Guerrilla Games y distribuido por Sony Interactive Entertainment para PlayStation 4. Es la primera propiedad intelectual de Guerrilla Games desde la serie Killzone en 2004 y se anunció por primera vez en el E3 2015. El juego está protagonizado por Aloy, una guerrera de la tribu de los Nora y está ambientado en un futuro post-apocalíptico donde las máquinas son la raza dominante de la Tierra.",
-        "caratula": "horizon.jpeg",
+        "caratula": "horizon.jpg",
         "estado":1
     },
     {
@@ -316,7 +316,7 @@
         "empresa": "Naughty Dog",
         "genero": "Acción-aventura",
         "resumen": "Cronológicamente el juego toma lugar cuatro años después de Uncharted 3: La traición de Drake. El retirado cazafortunas Nathan Drake vive felizmente su vida junto con su esposa Elena Fisher, pero todo se derrumba cuando aparece su hermano Sam, el que Nathan pensaba que estaba muerto. Sam necesita su ayuda para desenmascarar una conspiración histórica del famoso pirata aventurero Henry Avery y su legendario tesoro. Además, no son los únicos que buscan el tesoro, ya que Rafe Adler, multimillonario y exsocio de los hermanos Drake mientras estuvieron en una prisión, está buscándolo también, con la ayuda de Nadine Ross, la líder de la red de mercenarios Shoreline. Debido a que Nathan se siente culpable por haber dado por muerto a su hermano en el pasado, decide volver al mundo de los cazatesoros. Durante el viaje, Drake irá por suburbios y zonas cubiertas de nieve, pero la localización principal será Libertalia, una ciudad perdida en Madagascar. Naughty Dog lo ha calificado como su mayor aventura hasta el momento, la cual pondrá a prueba los límites de su capacidad física, su determinación, y le hará decidir cuánto está dispuesto a sacrificar para salvar a sus seres queridos.",
-        "caratula": "uncharted.jpg",
+        "caratula": "uncharted4.jpg",
         "estado":1
     },
     {

@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.tfc.javierros.servlets;
 
 import com.mysql.cj.Session;
@@ -18,18 +13,17 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.jsp.PageContext;
 
 /**
- * Servlet implementation class AltaUsuarioAction
+ *  
+ * @author javier
+ * 
+ * @description Servlet encagado de crear un nuevo usuario
+ * 
  */
 @WebServlet("/AltaUsuarioAction")
 public class AltaUsuarioAction extends HttpServlet {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * @see HttpServlet#service(HttpServletRequest request, HttpServletResponse
-     * response)
-     */
-    //Servlet que se encarga de controllar el alta de un nuevo ususario
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String nombre = request.getParameter("nombre");
         String apellidos = request.getParameter("apellido");
@@ -47,7 +41,7 @@ public class AltaUsuarioAction extends HttpServlet {
             }
         }
         request.getSession().setAttribute("usuario", usuario);//Creamos una sesion y pasamos el usuario creado a la sesion
-        request.getRequestDispatcher("ControllerUsuario?op=doCrearLista").forward(request, response);
+        request.getRequestDispatcher("Controller?op=doCrearLista").forward(request, response);
 
     }
 }

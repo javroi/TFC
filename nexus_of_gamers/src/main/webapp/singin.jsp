@@ -1,10 +1,11 @@
 <%-- 
     Document   : singin
     Created on : 25 abr. 2021, 10:50:48
-    Author     : javie
+    Author     : javier
 --%>
 
 <%@page import="com.tfc.javierros.domain.GestionUsuarios"%>
+<%@page import="com.tfc.javierros.servlets.Controller"%>
 <%@page import="com.tfc.javierros.modelo.Usuario"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="java.util.*"%>
@@ -45,7 +46,7 @@
                 }
             }
             if (existe) {
-                response.sendRedirect("ControllerUsuario?op=toHome");
+                response.sendRedirect("Controller?op=doRellenarListaJuegos");
             } else {%>
         <p class="errores">Usuario o contraseña erroneo</p>
         <%}

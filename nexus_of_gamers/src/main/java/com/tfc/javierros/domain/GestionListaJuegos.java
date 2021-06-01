@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.tfc.javierros.domain;
 
 import com.tfc.javierros.modelo.ListaJuegos;
@@ -15,27 +10,54 @@ import javax.persistence.TypedQuery;
 
 /**
  *
- * @author javie
+ * @author javier
+ * 
+ * @description Controlador encargado de la gestion de la clase de ListaJuegos
+ * 
  */
 public class GestionListaJuegos {
 
+    /**
+     *
+     * @name getEntityManager
+     * 
+     * @description Metodo que crea el EntityManager
+     * 
+     * @return  factory.createEntityManager()
+     * 
+     */
     private EntityManager getEntityManager() {
         EntityManagerFactory factory = Persistence.createEntityManagerFactory("WebPU");
         return factory.createEntityManager();
     }
     
-    public ListaJuegos altaLista(int id_user) {
-        System.out.println(id_user);
+    /**
+     *
+     * @name altaLista
+     * 
+     * @description Metodo para crear una lista en la base de datos
+     * 
+     * @param id_user
+     * 
+     */ 
+    public void altaLista(int id_user) {
         ListaJuegos listaJuegos = new ListaJuegos(id_user);
-        System.out.println(listaJuegos.getId_user());
         EntityManager em = getEntityManager();
         EntityTransaction tx = em.getTransaction();
         tx.begin();
         em.persist(listaJuegos);
         tx.commit();
-        return listaJuegos;
     }
     
+    /**
+     *
+     * @name traerListas
+     * 
+     * @description Metodo para traer un la lista de juegos de un usuario
+     * 
+     * @return  lista
+     * 
+     */  
     public List<ListaJuegos> traerListas(){
         EntityManager em = getEntityManager();
         TypedQuery<ListaJuegos> qr = em.createQuery("Select u from ListaJuegos u", ListaJuegos.class);

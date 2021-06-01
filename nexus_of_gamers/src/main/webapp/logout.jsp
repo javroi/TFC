@@ -1,7 +1,7 @@
 <%-- 
     Document   : logout
     Created on : 8 may. 2021, 11:58:08
-    Author     : javie
+    Author     : javier
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

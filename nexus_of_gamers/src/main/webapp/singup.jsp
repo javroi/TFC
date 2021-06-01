@@ -1,11 +1,11 @@
 <%-- 
     Document   : singup.jsp
     Created on : 28 abr. 2021, 16:18:14
-    Author     : javie
+    Author     : javier
 --%>
 
 <%@page import="java.util.List"%>
-<%@page import="com.tfc.javierros.servlets.ControllerUsuario"%>
+<%@page import="com.tfc.javierros.servlets.Controller"%>
 <%@page import="java.util.regex.Matcher"%>
 <%@page import="java.util.regex.Pattern"%>
 <%@page import="com.tfc.javierros.domain.GestionUsuarios"%>
@@ -71,12 +71,12 @@
 
                 //valida los numeros
                 if (numCount < 1) {
-                    error = error + "Contraseña ha de contener numeros\n";
+                    error = error + "Contraseña ha de contener al menos un numero\n";
                 }
 
                 //valida las mayusculas
                 if (capCount < 1) {
-                    error = error + "Contraseña ha de contener mayusculas\n";
+                    error = error + "Contraseña ha de contener al menos una mayuscula\n";
                 }
                 //Comprueba si los errores estan vacios 
                 if (!error.isEmpty()) {
@@ -105,7 +105,7 @@
                     if (existe) {
                         out.print("<p class=\"errores\">Usuario o email existente</p>");
                     } else {
-                        request.getRequestDispatcher("ControllerUsuario?op=doCrearUsuario").forward(request, response);
+                        request.getRequestDispatcher("Controller?op=doCrearUsuario").forward(request, response);
                     }
                 }
 

@@ -1,7 +1,7 @@
 <%-- 
     Document   : modificar.jsp
     Created on : 7 may. 2021, 18:02:52
-    Author     : javie
+    Author     : javier
 --%>
 <%@page import="com.tfc.javierros.domain.GestionUsuarios"%>
 <%@page import="com.tfc.javierros.modelo.AddGames"%>
@@ -9,7 +9,7 @@
 <%@page import="com.tfc.javierros.domain.GestionListaJuegos"%>
 <%@page import="com.tfc.javierros.domain.GestionAddGames"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@page import="com.tfc.javierros.servlets.ControllerUsuario"%>
+<%@page import="com.tfc.javierros.servlets.Controller"%>
 <%@page import="com.tfc.javierros.domain.GestionJuegos"%>
 <%@page import="com.tfc.javierros.modelo.Juego"%>
 <%@page import="com.tfc.javierros.modelo.Usuario"%>
@@ -38,13 +38,12 @@
                         GestionJuegos gJuego = new GestionJuegos();
                         Usuario u = (Usuario) session.getAttribute("usuario");
                         if (u == null) {
-                            response.sendRedirect("ControllerUsuario?op=toIndex");
-                        } else {
+                            response.sendRedirect("Controller?op=toIndex");
+                        } 
+                        else {
                             out.print("<a href=\"perfil.jsp\">Perfil</a>");
-
-
                     %>
-                    <a href="ControllerUsuario?op=toSalir">Cerrar Sesion</a>
+                    <a href="Controller?op=toSalir">Cerrar Sesion</a>
                 </nav>
             </div>
         </header>

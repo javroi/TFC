@@ -1,12 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.tfc.javierros.domain;
 
 import com.tfc.javierros.modelo.Usuario;
-import com.tfc.javierros.modelo.ListaJuegos;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -16,16 +10,41 @@ import javax.persistence.TypedQuery;
 
 /**
  *
- * @author javie
+ * @author javier
+ * 
+ * @description Controlador encargado de la gestion de la clase de Usuario
+ * 
  */
 public class GestionUsuarios {
-
+    
+    /**
+     *
+     * @name getEntityManager
+     * 
+     * @description Metodo que crea el EntityManager
+     * 
+     * @return  factory.createEntityManager()
+     * 
+     */
     private EntityManager getEntityManager() {
         EntityManagerFactory factory = Persistence.createEntityManagerFactory("WebPU");
         return factory.createEntityManager();
     }
 
-    //Metodo para dar de alta un usuario
+    /**
+     *
+     
+     * @name altaUsuario
+     * 
+     * @description Metodo para crear un usuario
+     * 
+     * @param nombre
+     * @param apellidos
+     * @param nickname
+     * @param email
+     * @param passw
+     * 
+     */ 
     public void altaUsuario(String nombre, String apellidos, String nickname, String email, String passw) {
         Usuario u = new Usuario(nombre, apellidos, nickname, email, passw);
         EntityManager em = getEntityManager();
@@ -35,7 +54,15 @@ public class GestionUsuarios {
         tx.commit();
     }
     
-    //Metodo para devolver la lista de todos los usuarios
+    /**
+     *
+     * @name existeUsuario
+     * 
+     * @description Metodo para traer una lista todas los usuarios
+     * 
+     * @return  lista
+     * 
+     */ 
     public List<Usuario> existeUsuario(){
         EntityManager em = getEntityManager();
         TypedQuery<Usuario> qr = em.createQuery("Select u from Usuario u", Usuario.class);
@@ -44,6 +71,20 @@ public class GestionUsuarios {
         return lista;
     } 
     
+    /**
+     *
+     * @name ModificarUsuario
+     * 
+     * @description Metodo para actualizar una review
+     * 
+     * @param id_user
+     * @param name
+     * @param surname
+     * @param password
+     * @param nickname
+     * @param email
+     * 
+     */
     public void ModificarUsuario(int id_user, String name, String surname, String nickname, String email, String password) {
         EntityManager em = getEntityManager();
         EntityTransaction tx = em.getTransaction();

@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.tfc.javierros.domain;
 
 import com.tfc.javierros.modelo.AddGames;
@@ -15,15 +10,37 @@ import javax.persistence.TypedQuery;
 
 /**
  *
- * @author javie
+ * @author javier
+ * 
+ * @description Controlador encargado de la gestion de la clase de AddGames
+ * 
  */
 public class GestionAddGames {
 
+    /**
+     *
+     * @name getEntityManager
+     * 
+     * @description Metodo que crea el EntityManager
+     * 
+     * @return  factory.createEntityManager()
+     * 
+     */   
     private EntityManager getEntityManager() {
         EntityManagerFactory factory = Persistence.createEntityManagerFactory("WebPU");
         return factory.createEntityManager();
     }
-
+    
+    /**
+     *
+     * @name altaAnyadir
+     * 
+     * @description Metodo para anyadir un juego por parte de un usuario
+     * 
+     * @param id_juego
+     * @param id_lista
+     * 
+     */    
     public void altaAnyadir(int id_juego, int id_lista) {
         AddGames add = new AddGames(id_juego, id_lista);
         EntityManager em = getEntityManager();
@@ -33,6 +50,15 @@ public class GestionAddGames {
         tx.commit();
     }
 
+    /**
+     *
+     * @name traerAdd
+     * 
+     * @description Metodo para traer una lista con todos los juegos anyadidos por usuarios 
+     * 
+     * @return  add
+     * 
+     */  
     public List<AddGames> traerAdd() {
         EntityManager em = getEntityManager();
         TypedQuery<AddGames> qr = em.createQuery("Select u from AddGames u", AddGames.class);
@@ -40,7 +66,17 @@ public class GestionAddGames {
 
         return add;
     }
-
+    
+    /**
+     *
+     * @name ModificarEstado
+     * 
+     * @description Metodo para modificar un juego anyadido por un usuario 
+     * 
+     * @param id_add
+     * @param estado
+     * 
+     */  
     public void ModificarEstado(int id_add, String estado) {
         EntityManager em = getEntityManager();
         EntityTransaction tx = em.getTransaction();

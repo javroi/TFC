@@ -1,14 +1,14 @@
 <%-- 
     Document   : perfil
     Created on : 4 may. 2021, 16:13:42
-    Author     : javie
+    Author     : javier
 --%>
 <%@page import="com.tfc.javierros.domain.GestionAddGames"%>
 <%@page import="com.tfc.javierros.modelo.AddGames"%>
 <%@page import="com.tfc.javierros.modelo.ListaJuegos"%>
 <%@page import="com.tfc.javierros.domain.GestionListaJuegos"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@page import="com.tfc.javierros.servlets.ControllerUsuario"%>
+<%@page import="com.tfc.javierros.servlets.Controller"%>
 <%@page import="com.tfc.javierros.domain.GestionJuegos"%>
 <%@page import="com.tfc.javierros.modelo.Juego"%>
 <%@page import="com.tfc.javierros.modelo.Usuario"%>
@@ -38,13 +38,13 @@
                         Usuario u = (Usuario) session.getAttribute("usuario");
                         String actualizado = request.getParameter("actualizado");
                         if (u == null) {
-                            response.sendRedirect("ControllerUsuario?op=toIndex");
+                            response.sendRedirect("Controller?op=toIndex");
                         } else {
                             out.print("<a href=\"perfil.jsp\">Perfil</a>");
 
 
                     %>
-                    <a href="ControllerUsuario?op=toSalir">Cerrar Sesion</a>
+                    <a href="Controller?op=toSalir">Cerrar Sesion</a>
                 </nav>
             </div>
         </header>
@@ -92,7 +92,7 @@
                                             if (juegos.get(j).getEstado() == 2) {
                                                 out.print("<div class=\"gallery_item\"><a class=\"gallery_enlace\" href=\"juego.jsp?juego=");
                                                 out.print(juegos.get(j).getNombre());
-                                                out.print("\"><h2 class=\"gallery_title\">" + juegos.get(j).getNombre() + "</h2><img src=\"images/" + juegos.get(j).getCaratula() + "\" class=\"gallery_img\"></a>");
+                                                out.print("\"><h2 class=\"gallery_title\">" + juegos.get(j).getNombre() + "</h2><img src=\"images/" + juegos.get(j).getCaratula() + "\" class=\"gallery_img_perfil\"></a>");
                                                 out.print("</div>");
                                             }
                                         }
@@ -110,7 +110,7 @@
                                             if (juegos.get(j).getEstado() == 2) {
                                                 out.print("<div class=\"gallery_item\"><a class=\"gallery_enlace\" href=\"juego.jsp?juego=");
                                                 out.print(juegos.get(j).getNombre());
-                                                out.print("\"><h2 class=\"gallery_title\">" + juegos.get(j).getNombre() + "</h2><img src=\"images/" + juegos.get(j).getCaratula() + "\" class=\"gallery_img\"></a>");
+                                                out.print("\"><h2 class=\"gallery_title\">" + juegos.get(j).getNombre() + "</h2><img src=\"images/" + juegos.get(j).getCaratula() + "\" class=\"gallery_img_perfil\"></a>");
                                                 out.print("</div>");
                                             }
                                         }
@@ -126,7 +126,7 @@
                                             if (juegos.get(j).getEstado() == 3) {
                                                 out.print("<div class=\"gallery_item\"><a class=\"gallery_enlace\" href=\"juego.jsp?juego=");
                                                 out.print(juegos.get(j).getNombre());
-                                                out.print("\"><h2 class=\"gallery_title\">" + juegos.get(j).getNombre() + "</h2><img src=\"images/" + juegos.get(j).getCaratula() + "\" class=\"gallery_img\"></a>");
+                                                out.print("\"><h2 class=\"gallery_title\">" + juegos.get(j).getNombre() + "</h2><img src=\"images/" + juegos.get(j).getCaratula() + "\" class=\"gallery_img_perfil\"></a>");
                                                 out.print("</div>");
                                             }
                                         }
@@ -142,7 +142,7 @@
                                             if (juegos.get(j).getEstado() == 4) {
                                                 out.print("<div class=\"gallery_item\"><a class=\"gallery_enlace\" href=\"juego.jsp?juego=");
                                                 out.print(juegos.get(j).getNombre());
-                                                out.print("\"><h2 class=\"gallery_title\">" + juegos.get(j).getNombre() + "</h2><img src=\"images/" + juegos.get(j).getCaratula() + "\" class=\"gallery_img\"></a>");
+                                                out.print("\"><h2 class=\"gallery_title\">" + juegos.get(j).getNombre() + "</h2><img src=\"images/" + juegos.get(j).getCaratula() + "\" class=\"gallery_img_perfil\"></a>");
                                                 out.print("</div>");
                                             }
                                         }
@@ -154,7 +154,7 @@
                 %>
             </div>
             <div class="modificacion">
-                <a href="ControllerUsuario?op=toModificarUsuario">Modificar datos de usuario</a>
+                <a href="Controller?op=toModificarUsuario">Modificar datos de usuario</a>
             </div>
     </body>
 </html>

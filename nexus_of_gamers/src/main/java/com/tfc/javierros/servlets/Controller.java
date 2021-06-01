@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.tfc.javierros.servlets;
 
 import java.io.IOException;
@@ -13,18 +8,18 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class Controller Servlet de controller para todo el
- * tema de usuarios
+ * 
+ * @author javier
+ * 
+ * @description Servlet encagado de almacenar todas las direcciones de la aplicaciones
+ *              y despues dirigir a estas
+ * 
  */
-@WebServlet("/ControllerUsuario")
-public class ControllerUsuario extends HttpServlet {
+@WebServlet("/Controller")
+public class Controller extends HttpServlet {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * @see HttpServlet#service(HttpServletRequest request, HttpServletResponse
-     * response)
-     */
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String op = request.getParameter("op");
         String url = "";
@@ -48,10 +43,6 @@ public class ControllerUsuario extends HttpServlet {
             case "toBuscar":
                 url = "buscar.jsp";
                 break;
-                
-            case "toCargarJuegp":
-                url = "cargarJuego.jsp";
-                break;
 
             case "toJuego":
                 url = "juego.jsp";
@@ -69,12 +60,12 @@ public class ControllerUsuario extends HttpServlet {
                 url = "AltaUsuarioAction";
                 break;
 
-            case "doVerificarUsuario":
-                url = "AltaUsuarioAction";
-                break;
-
             case "doCrearLista":
                 url = "AltaListaAction";
+                break;
+            
+            case "doRellenarListaJuegos":
+                url = "LeerJsonAction";
                 break;
         }
         request.getRequestDispatcher(url).forward(request, response);

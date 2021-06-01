@@ -1,11 +1,11 @@
 <%-- 
     Document   : home
     Created on : 25 abr. 2021, 10:22:23
-    Author     : javie
+    Author     : javier
 --%>
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@page import="com.tfc.javierros.servlets.ControllerUsuario"%>
+<%@page import="com.tfc.javierros.servlets.Controller"%>
 <%@page import="com.tfc.javierros.domain.GestionJuegos"%>
 <%@page import="com.tfc.javierros.modelo.Juego"%>
 <%@page import="com.tfc.javierros.modelo.Usuario"%>
@@ -36,7 +36,7 @@
                         List<Juego> juegos = gJuego.traerJuegos();
                         Usuario u = (Usuario) session.getAttribute("usuario");
                         if (u == null) {
-                            response.sendRedirect("ControllerUsuario?op=toIndex");
+                            response.sendRedirect("Controller?op=toIndex");
                         }
                         out.print("<a href=\"perfil.jsp\">Perfil</a>");
 
@@ -44,7 +44,7 @@
                             response.sendRedirect("buscar.jsp?juego=" + request.getParameter("buscador"));
                         }
                     %>
-                    <a href="ControllerUsuario?op=toSalir">Cerrar Sesion</a>
+                    <a href="Controller?op=toSalir">Cerrar Sesion</a>
                 </nav>
             </div>
         </header>

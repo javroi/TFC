@@ -1,11 +1,11 @@
 <%-- 
     Document   : buscar
     Created on : 9 may. 2021, 11:14:30
-    Author     : javie
+    Author     : javier
 --%>
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@page import="com.tfc.javierros.servlets.ControllerUsuario"%>
+<%@page import="com.tfc.javierros.servlets.Controller"%>
 <%@page import="com.tfc.javierros.domain.GestionJuegos"%>
 <%@page import="com.tfc.javierros.modelo.Juego"%>
 <%@page import="com.tfc.javierros.modelo.Usuario"%>
@@ -42,7 +42,7 @@
                         }
 
                     %>
-                    <a href="ControllerUsuario?op=toSalir">Cerrar Sesion</a>
+                    <a href="Controller?op=toSalir">Cerrar Sesion</a>
                     <p>
 
                     </p>
@@ -50,7 +50,8 @@
             </div>
         </header>
     <body>
-        <%            boolean encontrado = false;
+        <%            
+            boolean encontrado = false;
             String nombre_j = request.getParameter("juego").toLowerCase();
             for (int i = 0; i < juegos.size(); i++) {
                 String nombre_jbd = juegos.get(i).getNombre().toLowerCase();
